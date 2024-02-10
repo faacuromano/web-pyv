@@ -34,8 +34,8 @@ function Navbar() {
       { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
     ])
     setCallsToAction([
-      { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-      { name: 'Contact sales', href: '#', icon: PhoneIcon },
+      { name: 'Documental - "El soldado"', href: '#', icon: PlayCircleIcon },
+      { name: 'Contactate', href: '#', icon: PhoneIcon },
     ])
   },[mobileMenuOpen, products, callsToAction])
   return (
