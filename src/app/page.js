@@ -3,7 +3,7 @@ import Image from "next/image";
 import moreno_img from '../../public/morenohome.png'
 function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-evenly">
+    <main className="h-dvh flex min-h-screen flex-col items-center justify-evenly">
       <div className="flex place-content-evenly w-full items-center max-md:flex-col max-md:pb-12">
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] border-double	border-cyan-600	border-2"
@@ -20,7 +20,7 @@ function Home() {
       </div>
       <div className="mb-32 grid text-center lg:max-w-6xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://drive.google.com/drive/folders/1aTioaBjhAQ-QV6EJbCW1gOLR7Fgc5Qno"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
@@ -37,7 +37,7 @@ function Home() {
         </a>
 
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://chat.whatsapp.com/L6mRV6vtzLr2HozmjWSrVL"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
           target="_blank"
           rel="noopener noreferrer"
@@ -60,13 +60,13 @@ function Home() {
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
+            Mas info{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
+            Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium .
           </p>
         </a>
 
@@ -77,13 +77,13 @@ function Home() {
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
+            Mas info{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium .
           </p>
         </a>
       </div>

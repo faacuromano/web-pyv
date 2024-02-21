@@ -13,6 +13,7 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import logo_pyv from '../../public/logopyv.png'
 import Image from 'next/image'
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -20,29 +21,26 @@ function classNames(...classes) {
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const [callsToAction, setProducts] = useState([])
-
   const [products, setCallsToAction] = useState([])
 
   useEffect(()=>{
     setMobileMenuOpen(false)
-    setProducts([
-      { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-      { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-      { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-      { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-      { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-    ])
     setCallsToAction([
-      { name: 'Documental - "El soldado"', href: '#', icon: PlayCircleIcon },
+      { name: 'Documental - "El soldado"', href: 'https://www.youtube.com/watch?v=rCB8O1_7nLs&t=1938s', icon: PlayCircleIcon },
       { name: 'Contactate', href: '#', icon: PhoneIcon },
     ])
-  },[mobileMenuOpen, products, callsToAction])
+  },[ ])
+
+
+  const handleClose = ( ) => {
+    setMobileMenuOpen(false)
+  }
+
   return (
     <div className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="#" className='m-0'>
+          <a href="/" className='m-0'>
             <span className="sr-only">Principios y Valores</span>
             <Image className="h-14 w-auto" src={logo_pyv} alt="" />
           </a>
@@ -93,18 +91,7 @@ function Navbar() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  {callsToAction.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                    >
-                      <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
+
               </Popover.Panel>
             </Transition>
           </Popover>
@@ -112,7 +99,7 @@ function Navbar() {
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Contacto
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/actividades" className="text-sm font-semibold leading-6 text-gray-900">
             Actividades
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -125,18 +112,18 @@ function Navbar() {
           </a>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={handleClose}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-0 p-0">
+            <a href="/" className="-m-0 p-0">
               <span className="sr-only">Principios y Valores</span>
-              <Image className="h-14 w-auto" src={logo_pyv} alt="" />
+              <Image className="h-14 w-auto" src={logo_pyv} alt="Logo partido principios y valors" />
             </a>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
+              href='/actividades '
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -177,7 +164,7 @@ function Navbar() {
                   Contacto
                 </a>
                 <a
-                  href="#"
+                  href="/actividades"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Actividades
