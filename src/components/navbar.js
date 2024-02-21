@@ -112,11 +112,11 @@ function Navbar() {
           </a>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={handleClose}>
+      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel  className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-0 p-0">
+            <a href="/" className="-m-0 p-0" o>
               <span className="sr-only">Principios y Valores</span>
               <Image className="h-14 w-auto" src={logo_pyv} alt="Logo partido principios y valors" />
             </a>
@@ -142,6 +142,18 @@ function Navbar() {
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
+                      <Disclosure.Panel className="mt-2 space-y-2">
+                        {[...products].map((item) => (
+                          <Disclosure.Button
+                            key={item.name}
+                            as="a"
+                            href={item.href}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                          >
+                            {item.name}
+                          </Disclosure.Button>
+                        ))}
+                      </Disclosure.Panel>
                     </>
                   )}
                 </Disclosure>
