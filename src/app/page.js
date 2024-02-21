@@ -6,7 +6,7 @@ function Home() {
     <main className="h-full flex min-h-screen flex-col items-center justify-evenly">
       <div className="flex place-content-evenly w-full items-center max-md:flex-col max-md:pb-12">
         <Image
-          className="sm:h-10 dark:drop-shadow-[0_0_0.3rem_#ffffff70] border-double	border-cyan-600	border-2"
+          className="dark:drop-shadow-[0_0_0.3rem_#ffffff70] border-double	border-cyan-600	border-2"
           src={moreno_img}
           alt="Next.js Logo"
           width={270}
