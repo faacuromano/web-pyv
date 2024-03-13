@@ -102,7 +102,7 @@ function Navbar() {
           <a href="/actividades" className="text-sm font-semibold leading-6 text-gray-900">
             Actividades
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/secciones" className="text-sm font-semibold leading-6 text-gray-900">
             Contenido
           </a>
         </Popover.Group>
