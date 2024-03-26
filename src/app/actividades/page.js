@@ -10,6 +10,7 @@ const actividaddes = () => {
         <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ La básica</h1>
         <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Nosotros</h1>
         <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Rama femenina</h1>
+        <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Olla popular</h1>
         <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Nuestro candidato</h1>
         <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Campaña de adhesión</h1>
         <h1 className='text-xl text-black'>* Si te interesa participar de cualquierda de nuestras actividades no dudes en comunicarte haciendo click en los enlaces</h1>
