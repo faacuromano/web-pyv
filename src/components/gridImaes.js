@@ -17,10 +17,10 @@ const SquareImagesGrid = () => {
     { name: arbol02, link: '/rama-sindical', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
     { name: arbol03, link: '/juventud-peronista', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
     { name: arbol04, link: '/movimientos-sociales', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
-    { name: arbol05, link: '/movimiento-peronista', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
+    { name: arbol05, styleHover: 'none cursor-default' },
     { name: arbol06, link: '/rama-politica', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
     { name: arbol07, link: '/rama-empresarial', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
-    { name: arbol08, styleHover: 'none cursor-default ' },
+    { name: arbol08, styleHover: 'none cursor-default' },
     { name: arbol09, link: '/tecnicos-profesionales', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition' },
   ];
 

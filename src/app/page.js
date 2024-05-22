@@ -15,7 +15,7 @@ function Home() {
         />
         <div className="flex flex-col">
           <h1 className="text-5xl	max-md:text-3xl">Principios y Valores </h1>
-          <h2 className="text-2xl	text-cyan-800">Santa Fe </h2>
+          <h2 className="text-2xl	text-cyan-800">Rosario, Santa Fe </h2>
         </div>
       </div>
       <div className="mb-32 grid text-center lg:max-w-6xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
@@ -55,19 +55,19 @@ function Home() {
         </a>
 
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="/arbol"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Mas info{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-2 motion-  reduce:transform-none">
+            Las ramas{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium .
+            Ramas del movimiento peronista integradas en un arbol interactivo para conocer mas sobre el partido y su organizacion
           </p>
         </a>
 
@@ -78,13 +78,13 @@ function Home() {
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Mas info{" "}
+            Olla popular{" "}
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-          Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium .
+          Sumate a ayudar al pueblo mediante la olla popular que se realiza en Rosario
           </p>
         </a>
       </div>
