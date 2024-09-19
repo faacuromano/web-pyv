@@ -25,7 +25,7 @@ const SquareImagesGrid = () => {
   ];
 
   return (
-    <div className="lg:w-1/2  grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+    <div className=" grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
       {images.map((image, index) => (
         <a key={index} href={image.link} >
           <div className="relative">
