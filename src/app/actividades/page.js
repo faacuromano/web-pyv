@@ -1,24 +1,46 @@
-import React from 'react'
+import React from 'react';
 
-const actividaddes = () => {
+const Actividades = () => {
   return (
-    <>
-    <div className='flex justify-center pt-4'>
-      <div className='flex flex-col'>
-        <h1 className='text-4xl text-cyan-600 font-bold mb-4'> Actividades: </h1>
-        <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Ciclo de lectura (juventud)</h1>
-        <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ La básica</h1>
-        <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Nosotros</h1>
-        <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Rama femenina</h1>
-        <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Olla popular</h1>
-        <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Nuestro candidato</h1>
-        <h1 className='text-2xl text-black mb-2 p-2 bg-gray-200 rounded-md'>✅ Campaña de adhesión</h1>
-        <h1 className='text-xl text-black'>* Si te interesa participar de cualquierda de nuestras actividades no dudes en comunicarte haciendo click en los enlaces</h1>
+    <div className="flex justify-center pt-8 px-4">
+      <div className="flex flex-col max-w-lg">
+        <h1 className="text-4xl text-cyan-600 font-bold mb-6">Actividades:</h1>
+        <ul className="space-y-4">
+          <li className="flex items-center text-2xl bg-gray-300 rounded-md p-3">
+            <span className="text-green-600 mr-2">✅</span>
+            Ciclo de lectura (juventud)
+          </li>
+          <li className="flex items-center text-2xl bg-gray-300 rounded-md p-3">
+            <span className="text-green-800 mr-2">✅</span>
+            La básica
+          </li>
+          <li className="flex items-center text-2xl bg-gray-300 rounded-md p-3">
+            <span className="text-green-800 mr-2">✅</span>
+            Nosotros
+          </li>
+          <li className="flex items-center text-2xl bg-gray-300 rounded-md p-3">
+            <span className="text-green-800 mr-2">✅</span>
+            Rama femenina
+          </li>
+          <li className="flex items-center text-2xl bg-gray-300 rounded-md p-3">
+            <span className="text-green-800 mr-2">✅</span>
+            Olla popular
+          </li>
+          <li className="flex items-center text-2xl bg-gray-300 rounded-md p-3">
+            <span className="text-green-800 mr-2">✅</span>
+            Nuestro candidato
+          </li>
+          <li className="flex items-center text-2xl bg-gray-300 rounded-md p-3">
+            <span className="text-green-800 mr-2">✅</span>
+            Campaña de adhesión
+          </li>
+        </ul>
+        <p className="text-lg text-black mt-6">
+          * Si te interesa participar de cualquiera de nuestras actividades, no dudes en comunicarte haciendo click en los enlaces.
+        </p>
       </div>
     </div>
-    
-    </>
-  )
+  );
 }
 
-export default actividaddes
+export default Actividades;

@@ -2,9 +2,15 @@ import Image from 'next/image';
 import React from 'react';
 import image from '@/../public/gm.jpg';
 
+import image0 from './1.jpg';
+import image1 from './2.jpg';
+import image2 from './3.jpg';
+
+const images = [image0, image1, image2]
+
 const Page = () => {
   return (
-    <div className=" mx-40 flex flex-col items-center justify-center px-8">
+    <div className=" sm:mx-40 flex flex-col items-center justify-center px-8">
       <h1 className="text-4xl text-cyan-900 font-bold mb-8">Rama Politica</h1>
 
       <div className="mb-8">
@@ -20,18 +26,22 @@ const Page = () => {
 
       <h2 className="text-xl mb-4 text-gray-700">Si quieres participar, contactate acá: (341) 5-123456</h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
-        {[...Array(12)].map((_, index) => (
-          <div key={index} className="group relative cursor-pointer overflow-hidden rounded-lg hover:shadow-md transition duration-300 ease-in-out transform scale-95 hover:scale-100">
+      <div className="grid  grid-cols-2 md:grid-cols-4 gap-1 w-full">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className="relative w-full h-60 overflow-hidden rounded-lg hover:shadow-md transition duration-300 ease-in-out"
+          >
             <Image
-              src={image}
-              alt=""
-              width={400}
-              height={250}
-              className="object-cover"
+              src={img}
+              alt={`Actividad ${index + 1}`}
+              layout="fill"
+              className="object-cover  w-full h-auto"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white text-lg font-bold">Actividad {index + 1}</p>
+            <div className="absolute  inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-lg font-bold">
+                Actividad {index + 1}
+              </p>
             </div>
           </div>
         ))}
