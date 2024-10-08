@@ -3,13 +3,13 @@ import React from 'react';
 import image from '@/../public/gm.jpg';
 
 
-import image0 from './1.jpg';
-import image1 from './2.jpg';
-import image2 from './3.jpg';
-import image3 from './4.jpg';
-import image4 from './5.jpg';
-import image5 from './6.jpg';
-import image6 from './7.jpg';
+import image0 from './1.webp';
+import image1 from './2.webp';
+import image2 from './3.webp';
+import image3 from './4.webp';
+import image4 from './5.webp';
+import image5 from './6.webp';
+import image6 from './7.webp';
 
 const images = [image0, image1, image2, image3, image4, image5, image6];
 
@@ -22,7 +22,7 @@ const Page = () => {
         <p className="text-xl">
         Rama de la Juventud de Principios y Valores:
         </p>
-        <p className="text-xl">
+        <p className="text-xl font-normal">
         Tenemos por finalidad la formación  de cuadros políticos; colaborar en la construcción del partido desde nuestro espacio y nuestra mirada; organizar la juventud.
         Queremos que este sea un espacio de construcción, compañerismo, organización y acción para todas y todos los jóvenes que sientan al movimiento peronista y quieran empezar a militar.
         </p>

@@ -1,15 +1,15 @@
 'use client'
 import Image from 'next/image';
 import React from 'react';
-import arbol01 from '../../public/arbol-01.jpg';
-import arbol02 from '../../public/arbol-02.jpg';
-import arbol03 from '../../public/arbol-03.jpg';
-import arbol04 from '../../public/arbol-04.jpg';
-import arbol05 from '../../public/arbol-05.jpg';
-import arbol06 from '../../public/arbol-06.jpg';
-import arbol07 from '../../public/arbol-07.jpg';
-import arbol08 from '../../public/arbol-08.jpg';
-import arbol09 from '../../public/arbol-09.jpg';
+import arbol01 from '../../public/arbol-01.webp';
+import arbol02 from '../../public/arbol-02.webp';
+import arbol03 from '../../public/arbol-03.webp';
+import arbol04 from '../../public/arbol-04.webp';
+import arbol05 from '../../public/arbol-05.webp';
+import arbol06 from '../../public/arbol-06.webp';
+import arbol07 from '../../public/arbol-07.webp';
+import arbol08 from '../../public/arbol-08.webp';
+import arbol09 from '../../public/arbol-09.webp';
 
 const SquareImagesGrid = () => {
   const images = [

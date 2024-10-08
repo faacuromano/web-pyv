@@ -11,14 +11,14 @@ const Page = () => {
       <h1 className="text-4xl text-cyan-900 font-bold mb-8">Rama Sindical</h1>
 
       <div className="mb-8">
-        <p className="text-xl">
+      <p className='text-xl text-gray-900 font-normal'>
         La Rama Sindical está orientada a colaborar con los sindicatos y los trabajadores. 
         </p>
-        <p className="text-xl">
+        <p className='text-xl text-gray-900 font-normal'>
         Encolumnados en Juan Domingo Peron destacamos para la Argentina la dignidad del trabajo y el bienestar de los trabajadores, quienes son los constructores de la patria actual y futura.
         En la rama se trabaja la defensa de los derechos laborales, la unidad y organización de los trabajadores en pos de políticas que mejoren las condiciones de vida de nuestros obreros. 
         </p>
-        <p className="text-xl">
+        <p className='text-xl text-gray-900 font-normal'>
         Su objetivo es conectar el partido con el movimiento sindical y apoyar el desarrollo del equilibrio y la armonía entre trabajadores y capital.
         </p>
       </div>

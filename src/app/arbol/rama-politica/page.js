@@ -14,10 +14,10 @@ const Page = () => {
       <h1 className="text-4xl text-cyan-900 font-bold mb-8">Rama Politica</h1>
 
       <div className="mb-8">
-        <p className="text-xl">
+        <p className="text-xl font-normal">
         Esta rama se encarga de el analisis, la planificación estratégica, y el desarrollo de propuestas políticas. 
         </p>
-        <p className="text-xl">
+        <p className="text-xl font-normal">
         En línea con los principios Peronistas sobre la importancia del previo analisis para la adecuada planificación, 
         esta rama trabaja en la elaboración de estrategias y políticas que reflejen los valores y principios del partido, respondiendo asi a las 
         necesidades de la comunidad. 

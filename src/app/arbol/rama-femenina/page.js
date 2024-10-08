@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
-import image0 from "./1.jpg";
-import image1 from "./2.jpg";
-import image2 from "./3.jpg";
-import image3 from "./4.jpg";
-import image4 from "./5.jpg";
-import image5 from "./6.jpg";
-import image6 from "./7.jpg";
-import image7 from "./8.jpg";
-import image8 from "./9.jpg";
+import image0 from "./1.webp";
+import image1 from "./2.webp";
+import image2 from "./3.webp";
+import image3 from "./4.webp";
+import image4 from "./5.webp";
+import image5 from "./6.webp";
+import image6 from "./7.webp";
+import image7 from "./8.webp";
+import image8 from "./9.webp";
 
 const images = [image0, image1, image2, image3, image4, image5, image6, image7, image8];
 
