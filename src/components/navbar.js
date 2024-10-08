@@ -94,6 +94,9 @@ function Navbar() {
           <a href="#" className="text-md font-medium leading-6 text-gray-900 font-roboto">
             Contacto
           </a>
+          <a href="/catalogo" className="text-md font-medium leading-6 text-gray-900 font-roboto">
+            Catalogo
+          </a>
           <a href="/actividades" className="text-md font-medium leading-6 text-gray-900 font-roboto">
             Actividades
           </a>
@@ -163,6 +166,12 @@ function Navbar() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Actividades
+                </a>
+                <a
+                  href="/catalogo"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Catalogo
                 </a>
                 <a
                   href="/arbol"

@@ -14,7 +14,7 @@ const HomePage = () => {
             />
       </div>
       <p className='text-2xl text-gray-900 text-center mb-6 font-normal'>
-      <em>"Mejor que decir es hacer, mejor que prometer es realizar."</em>
+      <em>Mejor que decir es hacer, mejor que prometer es realizar.</em>
       </p>
       <p className='text-lg text-gray-700 text-center'>
         Volvé pronto para ver los frutos de nuestro esfuerzo colectivo.
