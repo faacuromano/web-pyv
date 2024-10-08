@@ -10,8 +10,15 @@ const roboto = Roboto_Condensed({
 });
 
 export const metadata = {
-  title: "PyV - Santa Fe",
+  title: {
+    default: "Inicio - Principios y Valores",
+    template: "%s - Principios y Valores"
+  },
   description: "Partido principios y valores - Santa Fe",
+  twitter: {
+    card: "summary_large_image"
+  }
+  
 };
 
 export default function RootLayout({ children }) {

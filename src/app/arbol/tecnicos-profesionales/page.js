@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import trabajo from "./trabajando.webp"
+import trabajo from "@/../public/trabajando.webp"
+
 const HomePage = () => {
   return (
     <main className="flex justify-center ">

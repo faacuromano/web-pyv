@@ -1,52 +1,27 @@
-import Image from 'next/image';
 import React from 'react';
-import image0 from "./1.jpg";
-import image1 from "./2.jpg";
-import image2 from "./3.jpg";
-
-const images = [image0, image1, image2];
-const Page = () => {
+import Image from 'next/image';
+import trabajo from "@/../public/trabajando.webp"
+const HomePage = () => {
   return (
-    <div className="lg:mx-40 flex flex-col items-center justify-center px-8">
-      <h1 className="text-4xl text-cyan-900 font-bold mb-8">Rama Sindical</h1>
-
-      <div className="mb-8">
-      <p className='text-xl text-gray-900 font-normal'>
-        La Rama Sindical está orientada a colaborar con los sindicatos y los trabajadores. 
-        </p>
-        <p className='text-xl text-gray-900 font-normal'>
-        Encolumnados en Juan Domingo Peron destacamos para la Argentina la dignidad del trabajo y el bienestar de los trabajadores, quienes son los constructores de la patria actual y futura.
-        En la rama se trabaja la defensa de los derechos laborales, la unidad y organización de los trabajadores en pos de políticas que mejoren las condiciones de vida de nuestros obreros. 
-        </p>
-        <p className='text-xl text-gray-900 font-normal'>
-        Su objetivo es conectar el partido con el movimiento sindical y apoyar el desarrollo del equilibrio y la armonía entre trabajadores y capital.
-        </p>
-      </div>
-
-      <h2 className="text-xl mb-4 text-gray-700">Si quieres participar, contactate acá: (341) 5-123456</h2>
-
-      <div className="grid  grid-cols-2 md:grid-cols-4 gap-1 w-full">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className="relative w-full h-60 overflow-hidden rounded-lg hover:shadow-md transition duration-300 ease-in-out"
-          >
-            <Image
-              src={img}
-              alt={`Actividad ${index + 1}`}
-              layout="fill"
-              className="object-cover  w-full h-auto"
+    <main className="flex justify-center ">
+    <div className='flex flex-col items-center justify-evenly w-3/5 h-96 bg-gray-100 rounded-lg'>
+      <div className='flex flex-row-reverse	p-4'>
+      <h1 className='text-4xl font-bold text-blue-900 mb-4 m-2 flex items-center '>En construcción</h1>
+      <Image
+              src={trabajo}
+              alt='Foto de Peron trabajando'
+              className="object-cover w-40 aspect-square m-2 rounded-full"
             />
-            <div className="absolute  inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white text-lg font-bold">
-                Actividad {index + 1}
-              </p>
-            </div>
-          </div>
-        ))}
       </div>
+      <p className='text-2xl text-gray-900 text-center mb-6 font-normal'>
+      <em>Mejor que decir es hacer, mejor que prometer es realizar.</em>
+      </p>
+      <p className='text-lg text-gray-700 text-center'>
+        Volvé pronto para ver los frutos de nuestro esfuerzo colectivo.
+      </p>
     </div>
+    </main>
   );
 };
 
-export default Page;
+export default HomePage;
