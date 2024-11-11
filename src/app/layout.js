@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const roboto = Roboto_Condensed({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700'], // Puedes agregar más pesos si los necesitas
+  weight: ['100', '300', '400', '500', '700'],
 });
 
 export const metadata = {
@@ -14,9 +14,28 @@ export const metadata = {
     default: "Inicio - Principios y Valores",
     template: "%s - Principios y Valores",
   },
-  description: "Partido principios y valores - Santa Fe",
+  description: "Partido Principios y Valores - Santa Fe. Encuentra información sobre el partido y nuestras propuestas.",
+  openGraph: {
+    title: "Principios y Valores - Santa Fe",
+    description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas y equipo.",
+    url: "https://principiosyvaloressantafe.com.ar",
+    type: "website",
+    images: [
+      {
+        url: "https://principiosyvaloressantafe.com.ar/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Principios y Valores",
+      },
+    ],
+    site_name: "Principios y Valores",
+  },
   twitter: {
     card: "summary_large_image",
+    site: "@principiosvalores",
+    title: "Principios y Valores - Santa Fe",
+    description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas.",
+    image: "https://principiosyvaloressantafe.com.ar/twitter-image.jpg",
   },
 };
 
@@ -28,6 +47,23 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Meta Tags for SEO */}
+        <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.image} />
+        {/* Hreflang */}
+        <link rel="alternate" href="https://principiosyvaloressantafe.com.ar" hrefLang="es" />
+        <link rel="alternate" href="https://principiosyvaloressantafe.com.ar/en" hrefLang="en" />
       </head>
       <body className={roboto.className}>
         <Navbar />

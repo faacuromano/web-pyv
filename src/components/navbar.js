@@ -91,7 +91,7 @@ function Navbar() {
             </Transition>
           </Popover>
 
-          <a href="#" className="text-md font-medium leading-6 text-gray-900 font-roboto">
+          <a href="/contacto" className="text-md font-medium leading-6 text-gray-900 font-roboto">
             Contacto
           </a>
           <a href="/catalogo" className="text-md font-medium leading-6 text-gray-900 font-roboto">

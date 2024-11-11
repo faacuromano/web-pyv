@@ -41,10 +41,11 @@ const products = [
 const CatalogPage = () => {
   return (
     <main className="min-h-screen ">
-      <h1 className="text-3xl font-bold text-center text-blue-900 ">
-        Catálogo de Productos
+      <h1 className="text-3xl font-bold text-center  text-cyan-800">
+        Catálogo de Principios y Valores
       </h1>
       <ProductList products={products} />
+      <p className='text-center text-sm p-2'>* Si estas interesado en alguno de los productos que ofrecemos desde el Partido Principios y Valores de Rosario, Santa Fe. Comunicate por whatsapp para ver los diferentes medios de pagos y stocks.</p>
     </main>
   );
 };
