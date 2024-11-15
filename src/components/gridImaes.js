@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image';
 import React from 'react';
 import arbol01 from '../../public/arbol-01.webp';
@@ -12,6 +13,8 @@ import arbol08 from '../../public/arbol-08.webp';
 import arbol09 from '../../public/arbol-09.webp';
 
 const SquareImagesGrid = () => {
+
+
   const images = [
     { name: arbol01, link: '/arbol/rama-femenina', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
     { name: arbol02, link: '/arbol/rama-sindical', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },

@@ -27,15 +27,16 @@ const HomePage = () => {
     
     <a href='/nosotros/accion-politica' className="cursor-pointer aspect-[5/3] rounded-lg shadow-lg p-6 w-80 relative overflow-hidden hover:shadow-xl transition text-center">
       <Image src={actionImage} alt="Acción Política" width={320} height={200} className="absolute top-0 left-0 w-full h-full object-cover" />
-      <div className="bg-cyan-800 bg-opacity-80 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+      <div className="hover:opacity-90 hover:bg-cyan-700 bg-cyan-800 bg-opacity-90 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
         <h3 className="text-xl font-semibold text-white mb-2">Acción Política</h3>
-        <p className="text-gray-200">Iniciativas para el bien común que promuevan la justicia social.</p>
+        <p className="text-gray-200">La acción política es una acción colectiva; es menester terminar con la mentalidad individualista.
+        </p>
       </div>
     </a>
 
     <a href='/nosotros/proponemos' className="cursor-pointer aspect-[5/3] rounded-lg shadow-lg p-6 w-80 relative overflow-hidden hover:shadow-xl transition text-center">
       <Image src={proposeImage} alt="Proponemos" width={320} height={200} className="absolute top-0 left-0 w-full h-full object-cover" />
-      <div className="bg-gray-200 bg-opacity-80 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+      <div className="bg-gray-200 hover:bg-yellow-100 transition-colors duration-500 hover:bg-opacity-80 bg-opacity-90 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
         <h3 className="text-xl font-semibold text-black mb-2">Proponemos</h3>
         <p className="text-gray-800">Estar al tanto de lo que está ocurriendo en nuestro país y cómo respondemos.</p>
       </div>
@@ -43,7 +44,7 @@ const HomePage = () => {
 
     <a href='/nosotros/politica-y-actualidad' className="cursor-pointer aspect-[5/3] rounded-lg shadow-lg p-6 w-80 relative overflow-hidden hover:shadow-xl transition text-center">
       <Image src={politicsImage} alt="Política Actual" width={320} height={200} className="absolute top-0 left-0 w-full h-full object-cover" />
-      <div className="bg-cyan-800 bg-opacity-80 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+      <div className="hover:opacity-90 hover:bg-cyan-700 bg-cyan-800 bg-opacity-90 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
         <h3 className="text-xl font-semibold text-white mb-2">Política Actual</h3>
         <p className="text-gray-200">Iniciativas para el bien común que promuevan la justicia social.</p>
       </div>
@@ -72,7 +73,7 @@ const HomePage = () => {
 
       {/* Cita Final */}
       <section className="py-16 bg-gray-100 text-center">
-        <p className="text-xl italic text-gray-800">
+        <p className="text-lg italic text-gray-800">
           Mejor que decir es hacer, mejor que prometer es realizar.
         </p>
       </section>

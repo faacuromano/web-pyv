@@ -22,7 +22,7 @@ function Navbar() {
     setMobileMenuOpen(false)
     setCallsToAction([
       { name: 'Documental - "El soldado"', href: 'https://www.youtube.com/watch?v=rCB8O1_7nLs&t=1938s', icon: PlayCircleIcon },
-      { name: 'Contactate', href: '#', icon: PhoneIcon },
+      { name: 'Contactate', href: '/contacto', icon: PhoneIcon },
     ])
   },[ ])
 
@@ -156,7 +156,7 @@ function Navbar() {
                   )}
                 </Disclosure>
                 <a
-                  href="#"
+                  href="/contacto"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contacto
