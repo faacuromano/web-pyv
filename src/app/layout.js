@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "../components/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Head from "next/head";
 
 const roboto = Roboto_Condensed({
   subsets: ['latin'],
@@ -11,12 +12,14 @@ const roboto = Roboto_Condensed({
 
 export const metadata = {
   title: {
-    default: "Inicio - Principios y Valores",
-    template: "%s - Principios y Valores",
+    default: "Principios y Valores: Pagina oficial Principios y Valores Rosario",
+    template: "%s - Patido político Principios y Valores - Peronismo",
   },
+  description: "Inicio partido Principios y Valores, Santa Fe. Conoce nuestro armado politico peronista",
+  canonical: "https://principiosyvaloressantafe/",
   openGraph: {
-    title: "Principios y Valores - Santa Fe",
     description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas y equipo.",
+    title: "Principios y Valores - Santa Fe",
     url: "https://principiosyvaloressantafe.com.ar",
     type: "website",
     images: [
@@ -39,7 +42,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <head>
+      <Head>
         <link rel="icon" href='/favicon.ico' sizes="any" />
         <link rel="icon" href='/favicon.ico' type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -60,13 +63,13 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content={metadata.twitter.image} />
         {/* Hreflang */}
         <link rel="alternate" href="https://principiosyvaloressantafe.com.ar" hrefLang="es" />
-        <link rel="alternate" href="https://principiosyvaloressantafe.com.ar/en" hrefLang="en" />
-      </head>
+      </Head>
       <body className={roboto.className}>
         <Navbar />
         {children}
         <Analytics />
         <SpeedInsights />
+        <link rel="canonical" href={metadata.canonical}></link>
       </body>
     </html>
   );
