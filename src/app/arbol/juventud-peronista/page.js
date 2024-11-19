@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import image from '@/../public/gm.jpg';
-
 
 import image0 from './1.webp';
 import image1 from './2.webp';
