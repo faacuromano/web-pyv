@@ -6,7 +6,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import logo_pyv from '../../public/logopyv.png'
+import logo_pyv from '../../public/logopyv.webp'
 import Image from 'next/image'
 
 function classNames(...classes) {

@@ -2,7 +2,7 @@
 const AccionPolitica = () => {
   return (
       <div className="max-w-3xl mx-auto p-6">
-        <h1 className="text-3xl font-bold text-center text-sky-900">La acción política</h1>
+        <h1 className="text-3xl font-bold text-center text-sky-900">Acción política</h1>
         <p className="font-semibold text-gray-700 mt-4">
           La acción política es una acción colectiva; es menester terminar con la mentalidad individualista.
           En este sentido es necesario acostumbrarse a trabajar por equipos, sin sentido personal e individualista, 

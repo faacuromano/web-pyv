@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
-import image from '@/../public/gm.jpg';
+import image from '@/../public/gm.webp';
 
-import image0 from './1.jpg';
-import image1 from './2.jpg';
-import image2 from './3.jpg';
+import image0 from './1.webp';
+import image1 from './2.webp';
+import image2 from './3.webp';
 
 const images = [image0, image1, image2]
 

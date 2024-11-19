@@ -4,6 +4,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 const Actividades = () => {
   return (
     <div className="flex justify-center pt-8 px-4">
+
       <div className="flex flex-col max-w-xl">
         <h1 className="text-4xl text-cyan-800 font-bold mb-6">Actividades del Partido Principios y Valores</h1>
         <ul className="space-y-4">
@@ -23,10 +24,10 @@ const Actividades = () => {
             <FaCheckCircle className="text-green-800 mr-2" />
             Rama femenina
           </li>
-          <li className="flex items-center text-2xl bg-gray-200 rounded-md p-3">
+          <a href='/olla-popular' className="flex w-full items-center text-2xl bg-gray-200 rounded-md p-3">
             <FaCheckCircle className="text-green-800 mr-2" />
             Olla popular
-          </li>
+          </a>
           <li className="flex items-center text-2xl bg-gray-200 rounded-md p-3">
             <FaCheckCircle className="text-green-800 mr-2" />
             Nuestro candidato

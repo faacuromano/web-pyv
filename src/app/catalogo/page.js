@@ -2,24 +2,24 @@
 
 import React from 'react';
 import ProductList from '../../components/ProductList';
-import logoPyV from '@/../public/logopyv.png'
-import olla from '@/../public/dias_mas_felices.jpg'
-import olla1 from '@/../public/remera_negra.jpg'
-import olla2 from '@/../public/remera_blanca.jpg'
+import logoPyV from '@/../public/logopyv.webp'
+import olla from '@/../public/dias_mas_felices.webp'
+import remera_negra from '@/../public/remera_negra.webp'
+import remera_blanca from '@/../public/remera_blanca.webp'
 const products = [
   {
     id: 1,
     name: 'Remera Negra Tropa de Leales',
     description: 'Descripción breve del producto 1.',
     price: '15.000',
-    image: olla1,
+    image: remera_negra,
   },
   {
-    id: 1,
+    id: 2,
     name: 'Remera Blanca Tropa de Leales',
-    description: 'Descripción breve del producto 1.',
+    description: 'Descripción breve del producto 2.',
     price: '15.000',
-    image: olla2,
+    image: remera_blanca,
   },
   {
     id: 3,
@@ -35,7 +35,6 @@ const products = [
     price: '18.000',
     image: olla,
   },
-  // Agrega más productos según sea necesario
 ];
 
 const CatalogPage = () => {

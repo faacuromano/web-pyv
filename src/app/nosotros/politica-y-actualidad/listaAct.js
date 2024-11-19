@@ -1,4 +1,4 @@
-import image0 from '@/../../public/Olla_2.jpg'
+import image0 from '@/../../public/Olla_2.webp'
 const actividadesList = [
     {
       titulo: "Club de lectura",

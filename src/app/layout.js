@@ -14,7 +14,6 @@ export const metadata = {
     default: "Inicio - Principios y Valores",
     template: "%s - Principios y Valores",
   },
-  description: "Partido Principios y Valores - Santa Fe. Encuentra información sobre el partido y nuestras propuestas.",
   openGraph: {
     title: "Principios y Valores - Santa Fe",
     description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas y equipo.",
@@ -22,7 +21,6 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://principiosyvaloressantafe.com.ar/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Principios y Valores",
@@ -35,7 +33,6 @@ export const metadata = {
     site: "@principiosvalores",
     title: "Principios y Valores - Santa Fe",
     description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas.",
-    image: "https://principiosyvaloressantafe.com.ar/twitter-image.jpg",
   },
 };
 
@@ -43,8 +40,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href='/favicon.ico' sizes="any" />
+        <link rel="icon" href='/favicon.ico' type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 

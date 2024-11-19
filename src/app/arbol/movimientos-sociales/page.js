@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import image from '@/../public/gm.jpg';
+import image from '@/../public/gm.webp';
 
 const Page = () => {
   return (
