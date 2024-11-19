@@ -12,13 +12,13 @@ const roboto = Roboto_Condensed({
 
 export const metadata = {
   title: {
-    default: "Principios y Valores: Pagina oficial Principios y Valores Rosario",
+    default: "Principios y Valores: Página oficial Principios y Valores Rosario",
     template: "%s - Patido político Principios y Valores - Peronismo",
   },
-  description: "Inicio partido Principios y Valores, Santa Fe. Conoce nuestro armado politico peronista",
+  description: "Inicio partido Principios y Valores, Santa Fe. Conoce nuestro armado político peronista",
   canonical: "https://www.principiosyvaloressantafe.com.ar",
   openGraph: {
-    description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas y equipo.",
+    description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas y equipo peronistas.",
     title: "Principios y Valores - Santa Fe",
     url: "https://principiosyvaloressantafe.com.ar",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata = {
       {
         width: 1200,
         height: 630,
-        alt: "Principios y Valores",
+        alt: "Principios y Valores - Peronismo",
       },
     ],
     site_name: "Principios y Valores",

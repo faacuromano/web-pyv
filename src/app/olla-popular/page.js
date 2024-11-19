@@ -37,9 +37,15 @@ const OllaPopular = () => {
         popular que se realiza todos los JUEVES en PLAZA SARMIENTO con el
         objetivo de brindar, no solamente un plato de comida, sino una charla,
         un abrazo, y un espacio de encuentro a quienes hoy lamentablemente no lo
-        tienen. No hay mayor aporte a la comunidad que ayudar a la felicidad de
-        quienes la habitan. La solidaridad de este pueblo es inmensa y queremos
-        compartir con vos la felicidad de no ignorar al que tenemos al lado.
+        tienen.
+      </p>
+      <p className="text-lg w-full lg:w-3/4 text-gray-900">
+        No hay mayor aporte a la comunidad que ayudar a la felicidad de quienes
+        la habitan.
+      </p>
+      <p className="text-lg w-full lg:w-3/4 text-gray-900">
+        La solidaridad de este pueblo es inmensa y queremos compartir con vos la
+        felicidad de no ignorar al que tenemos al lado.
       </p>
 
       <div className="relative w-full lg:w-1/2 container mx-auto p-4">
@@ -88,14 +94,18 @@ const OllaPopular = () => {
           ))}
         </div>
       </div>
+      <div className="w-full md:w-3/5 p-4 bg-sky-100 rounded-lg">
+      <h4 className="text-xl text-left text-cyan-900 font-bold">El pueblo ayuda al pueblo...</h4>
+      <h7 className='italic text-gray-500'> Un perqueño registro de nuestra olla</h7>
       <iframe
-      className="w-full md:w-1/2 mt-8"
+        className="w-full  mt-2"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/FHQeE_sDk7c?si=74PQiNGg88ceBRRc"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
+       </div>
     </main>
   );
 };
