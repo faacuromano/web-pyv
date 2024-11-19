@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
   return (
     <div>
         {children}
-        <link rel="canonical" href='http://localhost:3000/nosotros/politica-y-actualidad'></link>
+        <link rel="canonical" href='https://principiosyvaloressantafe.com.ar/nosotros/politica-y-actualidad'></link>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
   return (
     <div>
         {children}
-        <link rel="canonical" href='https://principiosyvaloressantafe/arbol'></link>
+        <link rel="canonical" href='https://principiosyvaloressantafe.com.ar/arbol'></link>
 
     </div>
   );

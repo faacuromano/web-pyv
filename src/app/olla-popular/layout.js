@@ -6,7 +6,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <div>
-        <link rel="canonical" href='https://principiosyvaloressantafe/olla-popular'></link>
+        <link rel="canonical" href='https://principiosyvaloressantafe.com.ar/olla-popular'></link>
         {children}
     </div>
   );

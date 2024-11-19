@@ -16,7 +16,7 @@ export const metadata = {
     template: "%s - Patido político Principios y Valores - Peronismo",
   },
   description: "Inicio partido Principios y Valores, Santa Fe. Conoce nuestro armado politico peronista",
-  canonical: "https://principiosyvaloressantafe/",
+  canonical: "https://principiosyvaloressantafe.com.ar",
   openGraph: {
     description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas y equipo.",
     title: "Principios y Valores - Santa Fe",
