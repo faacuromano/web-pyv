@@ -114,11 +114,11 @@ const HomePage = () => {
       </section>
 
       <hr className="mb-4"></hr>
-      <Proponemos></Proponemos>
+      <Proponemos imported={true}></Proponemos>
       <hr className="mb-4"></hr>
-      <Accion></Accion>
+      <Accion imported={true}></Accion>
       <hr className="mb-4"></hr>
-      <Actualidad></Actualidad>
+      <Actualidad imported={true}></Actualidad>
       <hr className="m-0"></hr>
       
       {/* Cita Final */}
