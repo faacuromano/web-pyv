@@ -3,11 +3,11 @@ const Proponemos = (imported) => {
     <div className="max-w-3xl mx-auto p-6">
       {imported.imported === true ? (
         <h3 className="text-3xl font-bold text-center text-sky-900">
-          Política Actual
+          Proponemos 
         </h3>
       ) : (
         <h1 className="text-3xl font-bold text-center text-sky-900">
-          Política Actual
+          Proponemos 
         </h1>
       )}{" "}
       <p className="font-semibold text-gray-700 mt-4">
