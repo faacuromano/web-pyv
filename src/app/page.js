@@ -12,22 +12,33 @@ const HomePage = () => {
     <main className="bg-gray-100">
       {/* Encabezado */}
       <section
-        className="relative h-dvh flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${communityImage.src})` }}
-      >
-        {/* Capa negra de transparencia */}
-        <div className="absolute inset-0 bg-black opacity-50" />
-        {/* Contenido */}
-        <div className="bg-white bg-opacity-80 p-8 pb-2 text-center rounded-md z-10">
-          <h1 className="text-3xl md:text-6xl font-bold text-gray-800 mb-4">
-            Partido Principios y Valores 
-          </h1>
-          <h2 className="text-2xl text-cyan-800">
-          Rosario, Santa Fe
-          </h2>
-        <p className="text-left text-gray-500 mt-6 italic" >* Página oficial partido Principios y Valores. Peronismo</p>
-        </div>
-      </section>
+  className="relative h-dvh flex items-center justify-center bg-cover bg-center"
+  style={{ backgroundImage: `url(${communityImage.src})` }}
+>
+  {/* Capa negra de transparencia */}
+  <div className="absolute inset-0 bg-black opacity-50" />
+  {/* Contenido */}
+  <div className="bg-white bg-opacity-80 p-8 pb-2 text-center rounded-md z-10">
+    <h1 className="text-3xl md:text-6xl font-bold text-gray-800 mb-4">
+      Partido Principios y Valores 
+    </h1>
+    <h2 className="text-2xl text-cyan-800">
+      Rosario, Santa Fe
+    </h2>
+    <p className="text-left text-gray-500 mt-6 italic">
+      * Página oficial partido Principios y Valores. Peronismo
+    </p>
+  </div>
+  {/* Agregar alt a la imagen del banner */}
+  <Image
+    src={communityImage.src}
+    alt="Imagen de banner del Partido Principios y Valores en Rosario, Santa Fe"
+    className="hidden"
+    width={400}
+    height={300}
+  />
+</section>
+
 
       {/* Sección de Propuestas */}
       <section className="py-12">
