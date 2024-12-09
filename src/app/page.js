@@ -26,7 +26,7 @@ const HomePage = () => {
       Rosario, Santa Fe
     </h2>
     <p className="text-left text-gray-500 mt-6 italic">
-      * Página oficial partido Principios y Valores. Peronismo
+      * Página oficial partido Principios y Valores.
     </p>
   </div>
   {/* Agregar alt a la imagen del banner */}
