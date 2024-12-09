@@ -13,11 +13,11 @@ const roboto = Roboto_Condensed({
 export const metadata = {
   title: "Principios y Valores - Santa Fe",
   description: "Partido Principios y Valores, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado en Rosario y Santa Fe.",
-  canonical: "https://www.principiosyvaloressantafe.com.ar",
+  canonical: "https://www.principiosyvaloressantafe.com.ar/",
   openGraph: {
     title: "Principios y Valores - Santa Fe",
     description: "Partido Principios y Valores, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado en Rosario y Santa Fe.",
-    url: "https://www.principiosyvaloressantafe.com.ar",
+    url: "https://www.principiosyvaloressantafe.com.ar/",
     type: "website",
     images: [
       {
@@ -44,7 +44,8 @@ export default function RootLayout({ children }) {
         {/* Etiquetas básicas */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="canonical" href="https://www.principiosyvaloressantafe.com.ar" />
+        <link rel="canonical" href='https://www.principiosyvaloressantafe.com.ar/'></link>
+
 
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
