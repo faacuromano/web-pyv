@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
         {/* Etiquetas básicas */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="canonical" href={metadata.canonical} />
+        <link rel="canonical" href="https://www.principiosyvaloressantafe.com.ar" />
 
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />

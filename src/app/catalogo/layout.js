@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Catalogo",
+  title: "Catalogo - Principios y Valores",
   description: "Mira los productos que tenemos en el catalogo, todos a precio popular para que puedas elegir lo que mas te gusta. Remeras, Libros, Stickers, y mas!",
 };
 

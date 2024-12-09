@@ -1,6 +1,6 @@
 export const metadata = {
   title: {
-    default: "Juventud Peronista",
+    default: "Rama Politica",
   },
 };
 

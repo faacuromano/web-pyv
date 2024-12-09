@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Proponemos",
-  description: "La construcción de comunidad, entendida a partir de organizar la capacidad creativa de la misma, y la práctica como marca del desarrollo político, y en su desarrollo, se irá dando la identidad, no sin un sentido comunitario, ante la libertad el deber, la armonía social del conjunto por sobre metas individuales.",
+  description: "La construcción de comunidad, entendida a partir de organizar la capacidad creativa de la misma, y la práctica como marca del desarrollo político, y en su desarrollo, se irá dando la identidad, no sin un sentido comunitario, ante la libertad el deber.",
 };
 
 export default function RootLayout({ children }) {
