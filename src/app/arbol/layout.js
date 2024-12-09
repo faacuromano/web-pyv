@@ -1,7 +1,6 @@
 export const metadata = {
-  title: {
-    default: "Arbol",
-  },
+  title: "Arbol",
+  Description: "Conoce nuestro arbol Peronista interactivo, donde podras ver y conocer las ramas del movimiento integradas en un diseño único. Para ingresar a las ramas haz click en ellas."
 };
 
 export default function RootLayout({ children }) {

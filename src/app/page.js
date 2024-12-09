@@ -44,8 +44,7 @@ const HomePage = () => {
       <section className="py-12">
         <div className="text-center mb-12">
           <p className="text-xl text-gray-900">
-            Nuestra forma de hacer política, desde la acción, siempre con
-            compromiso hacia la justicia social en Santa Fe.
+            Nuestra forma de hacer política, desde la acción, siempre con el norte y el compromiso en la justicia social de Santa Fe.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">

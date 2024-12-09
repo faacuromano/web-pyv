@@ -1,7 +1,6 @@
 export const metadata = {
-  title: {
-    default: "Catalogo",
-  },
+  title: "Catalogo",
+  description: "Mira los productos que tenemos en el catalogo, todos a precio popular para que puedas elegir lo que mas te gusta. Remeras, Libros, Stickers, y mas!",
 };
 
 export default function RootLayout({ children }) {

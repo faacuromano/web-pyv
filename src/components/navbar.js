@@ -37,7 +37,7 @@ function Navbar() {
         <div className="flex lg:flex-1">
           <a href="/" className='m-0'>
             <span className="sr-only font-roboto">Principios y Valores</span>
-            <Image className="h-14 w-auto" src={logo_pyv} alt="" />
+            <Image className="h-14 w-auto" src={logo_pyv} alt="Logo del partido" />
           </a>
         </div>
         <div className="flex lg:hidden">

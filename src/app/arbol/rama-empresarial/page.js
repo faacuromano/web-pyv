@@ -38,7 +38,7 @@ const Page = () => {
           >
             <Image
               src={img}
-              alt={`Actividad ${index + 1}`}
+              alt={`Imagen numero ${index + 1}`}
               layout="fill"
               className="object-cover  w-full h-auto"
             />
