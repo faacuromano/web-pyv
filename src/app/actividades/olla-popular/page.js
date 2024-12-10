@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import olla01 from "../../../public/Olla_0.webp";
-import olla02 from "../../../public/Olla_1.webp";
-import olla03 from "../../../public/Olla_2.webp";
-import olla04 from "../../../public/Olla_3.webp";
-import olla05 from "../../../public/Olla_4.webp";
+import olla01 from "../../../../public/Olla_0.webp";
+import olla02 from "../../../../public/Olla_1.webp";
+import olla03 from "../../../../public/Olla_2.webp";
+import olla04 from "../../../../public/Olla_3.webp";
+import olla05 from "../../../../public/Olla_4.webp";
 
 const OllaPopular = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
