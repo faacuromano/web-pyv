@@ -11,7 +11,7 @@ const Proponemos = (imported) => {
         </h1>
       )}{" "}
       <p className="font-semibold text-gray-700 mt-4">
-        La construcción de poder, entendida a partir de organizar la capacidad
+        La construcción, entendida a partir de organizar la capacidad
         creativa de la comunidad y la práctica como marca del desarrollo
         político, y en su desarrollo, se irá dando la identidad, no sin un
         sentido comunitario, ante la libertad el deber, la armonía social del
