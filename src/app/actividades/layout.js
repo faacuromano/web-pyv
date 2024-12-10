@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Actividades",
+  title: "Actividades Principios y Valores",
   description: "Sumate a ver nuestras actividades, a cualquiera de ellas podes acercarte a participar o dar una mano. Todos son siempre bienvenido. Olla popular. Club de lectura. Joranada de Afiliaciones. Charlas. El roperito",
 };
 

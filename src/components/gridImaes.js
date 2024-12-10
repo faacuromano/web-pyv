@@ -16,15 +16,15 @@ const SquareImagesGrid = () => {
 
 
   const images = [
-    { name: arbol01, link: '/arbol/rama-femenina', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
-    { name: arbol02, link: '/arbol/rama-sindical', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
-    { name: arbol03, link: '/arbol/juventud-peronista', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
-    { name: arbol04, link: '/arbol/movimientos-sociales', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
-    { name: arbol05, styleHover: 'none cursor-default' },
-    { name: arbol06, link: '/arbol/rama-politica', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
-    { name: arbol07, link: '/arbol/rama-empresarial', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
-    { name: arbol08, styleHover: 'none cursor-default' },
-    { name: arbol09, link: '/arbol/tecnicos-profesionales', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition' },
+    { name: arbol01,alt: "Rama Femenina",  link: '/arbol/rama-femenina', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
+    { name: arbol02,alt: "Rama Sindical",  link: '/arbol/rama-sindical', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
+    { name: arbol03,alt: "Rama Juventud Peronista",  link: '/arbol/juventud-peronista', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
+    { name: arbol04,alt: "Rama Movimientos Sociales",  link: '/arbol/movimientos-sociales', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
+    { name: arbol05,alt: "Peron y Evita",  styleHover: 'none cursor-default' },
+    { name: arbol06,alt: "Rama Politica",  link: '/arbol/rama-politica', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
+    { name: arbol07,alt: "Rama Empresarial",  link: '/arbol/rama-empresarial', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition ' },
+    { name: arbol08,alt: "Arbol Peronista",  styleHover: 'none cursor-default' },
+    { name: arbol09,alt: "Rama Tecnicos y Profesionales",  link: '/arbol/tecnicos-profesionales', styleHover: 'w-full h-auto hover:scale-110 hover:z-50 hover-shadow-sm transition' },
   ];
 
   return (
@@ -34,7 +34,7 @@ const SquareImagesGrid = () => {
           <div className="relative">
           <Image
             src={image.name}
-            alt={`Imagen ${index + 1}`}
+            alt={image.alt}
             width={500}
             height={500}
             className={image.styleHover}  // Asegúrate de que 'styleHover' esté definido en tu archivo CSS

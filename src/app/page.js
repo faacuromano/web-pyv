@@ -18,7 +18,7 @@ const HomePage = () => {
   {/* Capa negra de transparencia */}
   <div className="absolute inset-0 bg-black opacity-50" />
   {/* Contenido */}
-  <div className="bg-white bg-opacity-80 p-8 pb-2 text-center rounded-md z-10">
+  <div className="bg-white bg-opacity-90 p-8 pb-2 text-center rounded-md z-10">
     <h1 className="text-3xl md:text-6xl font-bold text-gray-800 mb-4">
       Partido Principios y Valores 
     </h1>
