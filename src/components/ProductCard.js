@@ -5,7 +5,7 @@ import Image from 'next/image';
 const ProductCard = ({ product }) => {
   const handleBuy = () => {
     // Redireccionar a WhatsApp con un mensaje personalizado
-    const message = `Hola! Estoy interesado en el articulo: _*${product.name}*_. \n¿Podrían confirmarme los detalles para la compra? \n *Muchas gracias.*`;
+    const message = `Hola! Estoy interesado en el articulo: _*${product.name}*_ . \n¿Podrían confirmarme los detalles para la compra? \n *Muchas gracias.*`;
     window.open(`https://wa.me/5493416829410?text=${encodeURIComponent(message)}`);
   };
   return (
