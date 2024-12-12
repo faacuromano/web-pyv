@@ -12,11 +12,11 @@ const roboto = Roboto_Condensed({
 export const metadata = {
   name: "PyV Santa Fe",
   title: "Pagina de Inicio - Principios y Valores Santa Fe",
-  description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe.  Tropa de Leales",
+  description: "Principios y Valores Rosario. Conoce nuestro partido y nuestro conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
   canonical: "https://www.principiosyvaloressantafe.com.ar/",
   openGraph: {
     title: "Principios y Valores: Santa Fe",
-    description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe. Tropa de Leales",
+    description: "Principios y Valores Rosario. Conoce nuestro partido y nuestro conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
     url: "https://www.principiosyvaloressantafe.com.ar/",
     type: "website",
     images: [
@@ -29,6 +29,7 @@ export const metadata = {
     ],
   },
   twitter: {
+    name: "PyV Santa Fe",
     card: "summary_large_image",
     site: "@principiosvalores",
     title: "Principios y Valores - Santa Fe",
@@ -42,11 +43,13 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <head>
         <title>{metadata.title}</title>
+
         <meta name="description" content={metadata.description} />
         <link rel="canonical" href='https://www.principiosyvaloressantafe.com.ar/'></link>
 
 
         {/* Open Graph */}
+        <meta property="og:name" content={metadata.openGraph.name} />
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta property="og:description" content={metadata.openGraph.description} />
         <meta property="og:url" content={metadata.openGraph.url} />
@@ -57,6 +60,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
 
         {/* Twitter */}
+        <meta name="twitter:name" content={metadata.twitter.name} />
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:site" content={metadata.twitter.site} />
         <meta name="twitter:title" content={metadata.twitter.title} />
