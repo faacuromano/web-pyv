@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "../components/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Head from "next/head";
 
 const roboto = Roboto_Condensed({
   subsets: ['latin'],
@@ -11,6 +10,7 @@ const roboto = Roboto_Condensed({
 });
 
 export const metadata = {
+  name: "PyV Santa Fe",
   title: "Principios y Valores: Santa Fe",
   description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe. En Tropa de Leales, el trabajo, la conviccion, y el amor por la comunidad son los vectores desde donde pensamos la doctrina peronista",
   canonical: "https://www.principiosyvaloressantafe.com.ar/",
@@ -24,7 +24,7 @@ export const metadata = {
         url: "https://www.principiosyvaloressantafe.com.ar/dias_mas_felices.webp",
         width: 1200,
         height: 630,
-        alt: "Principios y Valores - Peronismo",
+        alt: "Plan economico peronista - Plan de gobierno peronista",
       },
     ],
   },
