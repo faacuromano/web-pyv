@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
 
 
         {/* Open Graph */}
-        <meta property="og:name" content={metadata.openGraph.name} />
+        <meta property="og:site_name" content={metadata.openGraph.name} />
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta property="og:description" content={metadata.openGraph.description} />
         <meta property="og:url" content={metadata.openGraph.url} />
