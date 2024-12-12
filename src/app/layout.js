@@ -11,12 +11,12 @@ const roboto = Roboto_Condensed({
 
 export const metadata = {
   name: "PyV Santa Fe",
-  title: "Principios y Valores: Santa Fe",
-  description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe. En Tropa de Leales, el trabajo, la conviccion, y el amor por la comunidad son los vectores desde donde pensamos la doctrina peronista",
+  title: "Pagina de Inicio - Principios y Valores Santa Fe",
+  description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe.  Tropa de Leales",
   canonical: "https://www.principiosyvaloressantafe.com.ar/",
   openGraph: {
     title: "Principios y Valores: Santa Fe",
-    description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe. En Tropa de Leales, el trabajo, la conviccion, y el amor por la comunidad son los vectores desde donde pensamos la doctrina peronista",
+    description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe. Tropa de Leales",
     url: "https://www.principiosyvaloressantafe.com.ar/",
     type: "website",
     images: [
