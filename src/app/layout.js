@@ -15,8 +15,9 @@ export const metadata = {
   description: "Principios y Valores Rosario. Conoce nuestro partido y nuestro conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
   canonical: "https://www.principiosyvaloressantafe.com.ar/",
   openGraph: {
-    title: "Principios y Valores: Santa Fe",
-    description: "Principios y Valores Rosario. Conoce nuestro partido y nuestro conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
+    name: "PyV Santa Fe",
+    title: "Inicio - PyV Rosario, Santa Fe - Tropa de Leales",
+    description: "Principios y Valores Rosario. Conoce nuestro partido, trabajo y  conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
     url: "https://www.principiosyvaloressantafe.com.ar/",
     type: "website",
     images: [
