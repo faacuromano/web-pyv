@@ -11,12 +11,12 @@ const roboto = Roboto_Condensed({
 });
 
 export const metadata = {
-  title: "Principios y Valores - Santa Fe",
-  description: "Partido Principios y Valores, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado en Rosario y Santa Fe.",
+  title: "Principios y Valores: Santa Fe",
+  description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe. En Tropa de Leales, el trabajo, la conviccion, y el amor por la comunidad son los vectores desde donde pensamos la doctrina peronista",
   canonical: "https://www.principiosyvaloressantafe.com.ar/",
   openGraph: {
-    title: "Principios y Valores - Santa Fe",
-    description: "Partido Principios y Valores, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado en Rosario y Santa Fe.",
+    title: "Principios y Valores: Santa Fe",
+    description: "Partido Principios y Valores Rosario, Santa Fe. Conoce a nuestro conductor Guillermo Moreno y nuestro armado politico en Rosario y Santa Fe. En Tropa de Leales, el trabajo, la conviccion, y el amor por la comunidad son los vectores desde donde pensamos la doctrina peronista",
     url: "https://www.principiosyvaloressantafe.com.ar/",
     type: "website",
     images: [
@@ -40,8 +40,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <Head>
-        {/* Etiquetas básicas */}
+      <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <link rel="canonical" href='https://www.principiosyvaloressantafe.com.ar/'></link>
@@ -63,7 +62,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
-      </Head>
+      </head>
       <body className={roboto.className}>
         <Navbar />
         {children}
