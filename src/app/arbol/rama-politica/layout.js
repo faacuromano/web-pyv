@@ -1,10 +1,15 @@
+import Head from 'next/head';
 
 export default function RootLayout({ children }) {
   return (
     <div>
-        {children}
-        <link rel="canonical" href="https://www.principiosyvaloressantafe.com.ar/arbol/rama-politica"></link>
-
+      <Head>
+        <link
+          rel="canonical"
+          href="https://www.principiosyvaloressantafe.com.ar/nosotros/arbol/rama-politica"
+        />
+      </Head>
+      {children}
     </div>
   );
 }
