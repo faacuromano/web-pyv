@@ -1,42 +1,27 @@
-import Image from 'next/image';
 import React from 'react';
-import image from '@/../public/gm.webp';
-
-const Page = () => {
+import Image from 'next/image';
+import trabajo from "@/../public/trabajando.webp"
+const HomePage = () => {
   return (
-    <div className=" mx-40 flex flex-col items-center justify-center px-8">
-      <h1 className="text-4xl text-cyan-900 font-bold mb-8">Movimientos Sociales</h1>
-
-      <div className="mb-8">
-        <p className="text-xl">
-          Una descripcion de las actividades, la organizacion, ideas, objetivos, etc. La idea es poder explicar
-          brevemente de que se trata para dar introduccion a las imagenes de las actividades. Una descripcion de las
-          actividades, la organizacion, ideas, objetivos, etc. La idea es poder explicar brevemente de que se trata
-          para dar introduccion a las imagenes de las actividades.
-        </p>
-      </div>
-
-      <h2 className="text-xl mb-4 text-gray-700">Si quieres participar, contactate acá: (341) 5-123456</h2>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-        {[...Array(12)].map((_, index) => (
-          <div key={index} className="group relative cursor-pointer overflow-hidden rounded-lg hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105">
-            <Image
-              src={image}
-              alt=""
-              layout="responsive"
-              width={400}
-              height={250}
-              className="object-cover"
+    <main className="flex justify-center ">
+    <div className='flex flex-col items-center justify-evenly md:w-3/5 h-96 bg-gray-100 rounded-lg'>
+      <div className='flex flex-row-reverse	p-4'>
+      <h1 className='text-3xl sm:text-4xl font-bold text-blue-900 mb-4 m-2 flex items-center '>En construcción</h1>
+      <Image
+              src={trabajo}
+              alt='Foto de Peron trabajando'
+              className="object-cover sm:w-40 w-32 aspect-square m-2 rounded-full"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white text-lg font-bold">Actividad {index + 1}</p>
-            </div>
-          </div>
-        ))}
       </div>
+      <p className='text-xl sm:text-2xl text-gray-900 text-center mb-6 font-normal'>
+      <em>Mejor que decir es hacer, mejor que prometer es realizar.</em>
+      </p>
+      <p className='text-sm sm:text-lg text-gray-700 text-center'>
+        Volvé pronto para ver los frutos de nuestro esfuerzo colectivo.
+      </p>
     </div>
+    </main>
   );
 };
 
-export default Page;
+export default HomePage;
