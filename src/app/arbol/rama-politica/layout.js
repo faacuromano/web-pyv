@@ -1,8 +1,3 @@
-export const metadata = {
-  title: {
-    default: "Rama Politica",
-  },
-};
 
 export default function RootLayout({ children }) {
   return (

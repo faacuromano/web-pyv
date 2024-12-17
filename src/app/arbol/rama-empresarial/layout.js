@@ -1,7 +1,3 @@
-export const metadata = {
-  title: "Rama Empresarial",
-};
-
 export default function RootLayout({ children }) {
   return (
     <div>
