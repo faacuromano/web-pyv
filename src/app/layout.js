@@ -10,15 +10,18 @@ const roboto = Roboto_Condensed({
 });
 
 export const metadata = {
-  name: "PyV Santa Fe",
-  title: "Pagina de Inicio - Principios y Valores Santa Fe",
-  description: "Principios y Valores Rosario. Conoce nuestro partido y nuestro conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
+  applicationName: "PyV Santa Fe",
+  title: "PyV Santa Fe - Tropa de Leales",
+  description:
+    "Principios y Valores Rosario. Conoce nuestro partido y nuestro conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
   canonical: "https://www.principiosyvaloressantafe.com.ar/",
   openGraph: {
-    name: "PyV Santa Fe",
-    title: "Inicio - PyV Rosario, Santa Fe - Tropa de Leales",
-    description: "Principios y Valores Rosario. Conoce nuestro partido, trabajo y  conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
+    site_name: "PyV Santa Fe",
+    title: "PyV Santa Fe - Tropa de Leales",
+    description:
+      "Principios y Valores Rosario. Conoce nuestro partido, trabajo y conductor: Guillermo Moreno. Tropa de Leales. Peronismo.",
     url: "https://www.principiosyvaloressantafe.com.ar/",
+    locale: "es_AR",
     type: "website",
     images: [
       {
@@ -30,11 +33,12 @@ export const metadata = {
     ],
   },
   twitter: {
-    name: "PyV Santa Fe",
+    site_name: "PyV Santa Fe",
     card: "summary_large_image",
     site: "@principiosvalores",
     title: "Principios y Valores - Santa Fe",
-    description: "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas.",
+    description:
+      "Partido Principios y Valores - Santa Fe. Conoce nuestras propuestas.",
     image: "https://www.principiosyvaloressantafe.com.ar/logopyv.webp",
   },
 };
@@ -44,16 +48,18 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <head>
         <title>{metadata.title}</title>
-
         <meta name="description" content={metadata.description} />
-        <link rel="canonical" href='https://www.principiosyvaloressantafe.com.ar/'></link>
-
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Language" content="es-AR" />
+        <meta name="keywords" content="Principios y Valores, PyV, Santa Fe, Rosario, Guillermo Moreno, partido peronista, lealtad, peronismo" />
+        <link rel="canonical" href={metadata.canonical} />
 
         {/* Open Graph */}
-        <meta property="og:site_name" content={metadata.openGraph.name} />
+        <meta property="og:site_name" content={metadata.openGraph.site_name} />
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta property="og:description" content={metadata.openGraph.description} />
         <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:locale" content="es_AR" />
         <meta property="og:type" content={metadata.openGraph.type} />
         <meta property="og:image" content={metadata.openGraph.images[0].url} />
         <meta property="og:image:width" content={metadata.openGraph.images[0].width} />
@@ -61,12 +67,15 @@ export default function RootLayout({ children }) {
         <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
 
         {/* Twitter */}
-        <meta name="twitter:name" content={metadata.twitter.name} />
+        <meta property="twitter:site_name" content={metadata.twitter.site_name} />
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:site" content={metadata.twitter.site} />
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
+
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className={roboto.className}>
         <Navbar />
