@@ -24,8 +24,6 @@ const Page = () => {
         </p>
       </div>
 
-      <h2 className="text-xl mb-4 text-gray-700">Si quieres participar, contactate acá: (341) 5-123456</h2>
-
       <div className="grid  grid-cols-2 md:grid-cols-4 gap-1 w-full">
         {images.map((img, index) => (
           <div

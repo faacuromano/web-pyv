@@ -2,7 +2,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>Campaña de Afiliaciones</div>
+    <div>
+      <h1>Campaña de Afiliaciones</h1>
+    </div>
   )
 }
 

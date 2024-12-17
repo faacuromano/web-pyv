@@ -2,7 +2,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>Economia Popular</div>
+    <div>
+      <h1>Economia Popular</h1>
+    </div>
   )
 }
 
