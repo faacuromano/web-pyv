@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
       <Head>
         <link
           rel="canonical"
-          href="https://www.principiosyvaloressantafe.com.ar/nosotros/arbol/rama-sindical"
+          href="https://www.principiosyvaloressantafe.com.ar/arbol/rama-sindical"
         />
       </Head>
       {children}

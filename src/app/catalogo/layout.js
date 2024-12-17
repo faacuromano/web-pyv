@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
       <Head>
         <link
           rel="canonical"
-          href="https://www.principiosyvaloressantafe.com.ar/nosotros/catalogo"
+          href="https://www.principiosyvaloressantafe.com.ar/catalogo"
         />
       </Head>
       {children}

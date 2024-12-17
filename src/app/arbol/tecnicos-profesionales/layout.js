@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
       <Head>
         <link
           rel="canonical"
-          href="https://www.principiosyvaloressantafe.com.ar/nosotros/tecnicos-profesionales"
+          href="https://www.principiosyvaloressantafe.com.ar/tecnicos-profesionales"
         />
       </Head>
       {children}

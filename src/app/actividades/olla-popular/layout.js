@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
       <Head>
         <link
           rel="canonical"
-          href="https://www.principiosyvaloressantafe.com.ar/nosotros/actividades/olla-popular"
+          href="https://www.principiosyvaloressantafe.com.ar/actividades/olla-popular"
         />
       </Head>
       {children}
