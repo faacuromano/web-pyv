@@ -24,9 +24,6 @@ export const metadata = {
     "lealtad",
     "peronismo",
   ],
-  alternates: {
-    canonical: "https://www.principiosyvaloressantafe.com.ar/",
-  },
   openGraph: {
     title: "PyV Santa Fe - Tropa de Leales",
     description:
@@ -34,7 +31,7 @@ export const metadata = {
     url: "https://www.principiosyvaloressantafe.com.ar/",
     siteName: "PyV Santa Fe",
     locale: "es_AR",
-    type: "website",
+    type: "website",  
     images: [
       {
         url: "https://www.principiosyvaloressantafe.com.ar/dias_mas_felices.webp",
@@ -63,9 +60,6 @@ export default function RootLayout({ children }) {
 
         {/* Meta descripción */}
         <meta name="description" content={metadata.description} />
-
-        {/* URL canónica */}
-        <link rel="canonical" href={metadata.alternates.canonical} />
 
         {/* Meta keywords */}
         <meta name="keywords" content={metadata.keywords.join(", ")} />
