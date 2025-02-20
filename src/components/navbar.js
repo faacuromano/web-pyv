@@ -5,7 +5,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon, BookOpenIcon} from '@heroicons/react/20/solid'
 import logo_pyv from '../../public/logopyv.webp'
 import Image from 'next/image'
 
@@ -23,6 +23,7 @@ function Navbar() {
     setCallsToAction([
       { name: 'Documental - "El soldado"', href: 'https://www.youtube.com/watch?v=rCB8O1_7nLs&t=1938s', icon: PlayCircleIcon },
       { name: 'Contactate', href: '/contacto', icon: PhoneIcon },
+      { name: 'Biblioteca Peronista', href: 'https://drive.google.com/drive/folders/1aTioaBjhAQ-QV6EJbCW1gOLR7Fgc5Qno', icon: BookOpenIcon},
     ])
   },[ ])
 

@@ -10,21 +10,21 @@ const Proponemos = (imported) => {
           Proponemos 
         </h1>
       )}{" "}
-      <p className="font-semibold text-gray-700 mt-4">
-        La construcción, entendida a partir de organizar la capacidad
+      <p className="font-semibold text-gray-700 mt-2">
+        La construcción , entendida a partir de organizar la capacidad
         creativa de la comunidad y la práctica como marca del desarrollo
         político, y en su desarrollo, se irá dando la identidad, no sin un
         sentido comunitario, ante la libertad el deber, la armonía social del
         conjunto por sobre metas individuales.
       </p>
-      <p className="font-semibold text-gray-700 mt-4">
+      <p className="font-semibold text-gray-700 mt-2">
         Nuestra acción política no la promovemos para el mañana, buscamos una
         tabla de valores pública, que todos estén entendidos, democratizar la
         forma de pensar, que un trabajador pueda hacer política, transparentando
         la forma de pensar del dirigente, para que el pueblo sepa que está
         haciendo.
       </p>
-      <p className="font-semibold text-gray-700 mt-4">
+      <p className="font-semibold text-gray-700 mt-2">
         Así, la doctrina, lo ampara al trabajador, una nueva democracia,
         organizando al pueblo, dotando.
       </p>

@@ -124,11 +124,11 @@ const HomePage = () => {
         </div>
       </section>
 
-      <hr className="mb-4"></hr>
+      <hr id="border-line" className="mt-8"></hr>
       <Proponemos imported={true}></Proponemos>
-      <hr className="mb-4"></hr>
+      <hr id="border-line" className="mt-8"></hr>
       <Accion imported={true}></Accion>
-      <hr className="mb-4"></hr>
+      <hr id="border-line" className="mt-8"></hr>
       <Actualidad imported={true}></Actualidad>
       <hr className="m-0"></hr>
       

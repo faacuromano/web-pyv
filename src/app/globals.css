@@ -12,3 +12,6 @@
     font-family: inherit; /* Asegúrate de que no esté especificada otra fuente aquí */
   }
   
+  #border-line{
+    border-color: black;
+  }
