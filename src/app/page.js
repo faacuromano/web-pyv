@@ -10,10 +10,7 @@ import SquareImagesGrid from "@/components/gridImaes";
 
 const HomePage = () => {
   return (
-    <main className="bg-gray-100">
-      {/* Encabezado */}
-
-
+    <main className="bg-gray-100 overflow-x-hidden">
         {/* Agregar alt a la imagen del banner */}
         <Image
     src={communityImage.src}
