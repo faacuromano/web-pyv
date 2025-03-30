@@ -1,5 +1,5 @@
 import Image from "next/image";
-import communityImage from "../../public/guillermo-moreno-visita-ituzaingo-luego-de-acto-en-ferro.avif";
+import communityImage from "../../public/home.png";
 import actionImage from "../../public/gm.webp";
 import proposeImage from "../../public/gm.webp";
 import politicsImage from "../../public/gm.webp";
@@ -12,31 +12,16 @@ const HomePage = () => {
   return (
     <main className="bg-gray-100">
       {/* Encabezado */}
-      <section
-        className="relative h-dvh flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${communityImage.src})` }}
-      >
-        {/* Capa negra de transparencia */}
-        <div className="absolute inset-0 bg-black opacity-20" />
-        {/* Contenido */}
-        <div className="bg-white bg-opacity-90 p-8 pb-2 text-center rounded-md z-10">
-          <h1 className="text-3xl md:text-6xl font-bold text-gray-800 mb-4">
-            Partido Principios y Valores
-          </h1>
-          <h2 className="text-2xl text-cyan-800">Rosario, Santa Fe</h2>
-          <p className="text-left text-gray-500 mt-6 italic">
-            * Página oficial partido Principios y Valores.
-          </p>
-        </div>
+
+
         {/* Agregar alt a la imagen del banner */}
         <Image
-          src={communityImage.src}
-          alt="Imagen de banner del Partido Principios y Valores en Rosario, Santa Fe"
-          className="hidden animate-spin"
-          width={400}
-          height={300}
+    src={communityImage.src}
+    alt="Imagen de banner del Partido Principios y Valores en Rosario, Santa Fe"
+    className="w-full h-full object-cover opacity-0 animate-zoom-in"
+    width={1600}
+    height={1068}
         />
-      </section>
       {/* Sección de Propuestas */}
       <section className="py-4">
         <div className="text-center my-4 p-2">
@@ -118,15 +103,15 @@ const HomePage = () => {
         </div>
       </section>
       <div className="bg-white p-4">
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold w-full text-center m-2">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold w-full text-center m-2">
           Ramas del movimiento peronista
-        </h1>   
+        </h1>
         <div className="container md:w-2/5 mx-auto flex justify-center">
           <SquareImagesGrid />
         </div>
         <h1 className="text-lg sm:text-xl md:text-2xl text-gray-500 italic font-logth w-full text-center mt-8">
           El arbol se conoce por sus frutos...
-        </h1>   
+        </h1>
       </div>
 
       {/* Cita Final */}
