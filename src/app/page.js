@@ -18,7 +18,7 @@ const HomePage = () => {
         <Image
     src={communityImage.src}
     alt="Imagen de banner del Partido Principios y Valores en Rosario, Santa Fe"
-    className="w-full h-full object-cover opacity-0 animate-zoom-in"
+    className="md:w-full max-width-100 max-w-none h-full object-cover opacity-0 animate-zoom-in"
     width={1600}
     height={1068}
         />
