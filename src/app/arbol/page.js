@@ -1,22 +1,29 @@
-'use client'
-import React, {useEffect} from 'react';
-import SquareImagesGrid from '../../components/gridImaes.js';
+"use client";
+import React, { useEffect } from "react";
+import SquareImagesGrid from "../../components/gridImaes.js";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   useEffect(() => {
-    const sound = new Audio('/arbolfrutos.mp3')
+    const sound = new Audio("/arbolfrutos.mp3");
     sound.play().catch((e) => {
-      console.log('El navegador bloqueó la reproducción automática:', e);
+      console.log("El navegador bloqueó la reproducción automática:", e);
     });
   }, []);
 
   return (
     <main className="h-full flex flex-col items-center">
-    <div className="container md:w-2/5 mx-auto flex justify-center">
-      <SquareImagesGrid />
-    </div>
-    <h1 className='text-3xl m-2 font-semibold w-full text-center mt-12'>El arbol se conoce por sus frutos...</h1>
-
+      <div className="container md:w-2/5 mx-auto flex justify-center">
+        <SquareImagesGrid />
+      </div>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="w-full text-xl md:text-4xl font-light text-gray-700 italic text-center m-2 mt-12"
+      >
+        El árbol se conoce por sus frutos...
+      </motion.h1>
     </main>
   );
 };

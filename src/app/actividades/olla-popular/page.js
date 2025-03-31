@@ -24,8 +24,8 @@ const OllaPopular = () => {
   };
 
   return (
-    <main className="h-full flex flex-col items-center p-8">
-      <h1 className="sm:text-4xl text-2xl font-bold text-center mb-6 text-cyan-700">
+    <main className=" sm:mx-40 flex flex-col items-center justify-center px-8" >
+      <h1 className="text-4xl text-cyan-900 font-bold mb-8">
         El pueblo ayuda al pueblo
       </h1>
       <h2 className="text-lg text-center w-full lg:w-3/4 font-bold text-gray-900">
@@ -48,7 +48,7 @@ const OllaPopular = () => {
         felicidad de no ignorar al que tenemos al lado.
       </p>
 
-      <div className="relative w-full lg:w-1/2 container mx-auto p-4">
+      <div className="relative w-full lg:w-2/3 container mx-auto p-4">
         <div className="overflow-hidden rounded-lg shadow-lg">
           <div
             className="flex transition-transform ease-in-out duration-700"
@@ -61,7 +61,7 @@ const OllaPopular = () => {
                   alt={`Imagen ${index + 1} de la olla popular`}
                   width={600}
                   height={400}
-                  className="aspect-[16/9] w-full rounded-lg object-cover"
+                  className="aspect-[16/9] w-full object-cover"
                 />
               </div>
             ))}
@@ -69,14 +69,14 @@ const OllaPopular = () => {
         </div>
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-cyan-700 text-white text-sm sm:text-2xl p-3 rounded-full shadow-lg hover:bg-cyan-600 focus:outline-none"
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-sky-700 text-white text-sm sm:text-2xl p-2 shadow-lg hover:bg-sky-600 focus:outline-none"
           aria-label="Anterior"
         >
           &lt;
         </button>
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-cyan-700 text-white text-sm sm:text-2xl p-3 rounded-full shadow-lg hover:bg-cyan-600 focus:outline-none"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-sky-700 text-white text-sm sm:text-2xl p-2 shadow-lg hover:bg-sky-600 focus:outline-none"
           aria-label="Siguiente"
         >
           &gt;
@@ -86,21 +86,23 @@ const OllaPopular = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 mx-1 rounded-full ${
-                currentSlide === index ? "bg-cyan-400" : "bg-gray-700"
+              className={`w-3 h-3 mx-2 ${
+                currentSlide === index ? "bg-sky-600 scale-150 border-2 border-black" : "bg-gray-400"
               } transition-colors`}
               aria-label={`Ir a la diapositiva ${index + 1}`}
             />
           ))}
         </div>
       </div>
-      <div className="w-full md:w-3/5 p-4 bg-sky-100 rounded-lg">
-      <h4 className="text-xl text-left text-cyan-900 font-bold">El pueblo ayuda al pueblo...</h4>
-      <h7 className='italic text-gray-500'> Un perqueño registro de nuestra olla</h7>
+      <div className=" my-4">
+      <div>
+      <h4 className="text-xl md:text-3xl text-left text-cyan-900 font-bold ">El pueblo ayuda al pueblo...</h4>
+      <h7 className='italic text-gray-500 my-4'> Un perqueño registro de nuestra olla</h7>
+      </div>
       <iframe
-        className="w-full  mt-2"
-        width="560"
-        height="315"
+        className="mt-2"
+        width="1000"
+        height="500"
         src="https://www.youtube.com/embed/FHQeE_sDk7c?si=74PQiNGg88ceBRRc"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -123,28 +123,3 @@ const HomePage = () => {
 
 export default HomePage;
 
-{
-  /*
-      <section className="py-16 bg-gray-100 text-center">
-        <h2 className="text-3xl font-bold text-blue-900">Actualidad</h2>
-        <p className="text-lg text-gray-700">
-          Mantente informado sobre nuestras últimas acciones y noticias en
-          Santa Fe.
-        </p>
-        <div className="flex flex-wrap justify-center gap-8">
-          <div className="bg-white rounded-lg shadow-lg p-6 w-80">
-            <h3 className="text-xl font-semibold mb-2">
-              Reunión comunitaria en Rosario
-            </h3>
-            <p className="text-gray-600">
-              Descubre cómo estamos colaborando con vecinos para generar cambios
-              significativos.
-            </p>
-            <button className="mt-4 text-blue-500 hover:underline">
-              Leer más
-            </button>
-          </div>
-        </div>
-      </section>
-      */
-}
