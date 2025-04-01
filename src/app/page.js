@@ -22,10 +22,10 @@ const HomePage = () => {
       {/* Sección de Propuestas */}
       <section className="py-4">
         <div className="text-center my-4 p-2">
-          <p className="text-md sm:text-xl text-gray-900">
+          <h2 className="text-md sm:text-xl text-gray-900">
             Nuestra forma de hacer política, desde la acción, siempre con el
             norte y el compromiso en la justicia social de Santa Fe.
-          </p>
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
           <a
