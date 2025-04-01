@@ -16,14 +16,14 @@ const HomePage = () => {
       <div className="container md:w-2/5 mx-auto flex justify-center">
         <SquareImagesGrid />
       </div>
-      <motion.h1
+      <motion.h2
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         className="w-full text-xl md:text-4xl font-light text-gray-700 italic text-center m-2 mt-12"
       >
         El árbol se conoce por sus frutos...
-      </motion.h1>
+      </motion.h2>
     </main>
   );
 };
