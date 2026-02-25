@@ -9,10 +9,10 @@ function Footer() {
         {/* Top accent line (Sol de Mayo yellow) */}
         <div className="w-12 h-0.5 bg-amarillo-400 mb-12"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-8">
 
           {/* Brand column */}
-          <div className="lg:col-span-4">
+          <div className="col-span-2 lg:col-span-4">
             <Image
               src={logo_pyv}
               alt="Logo Principios y Valores"

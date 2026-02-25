@@ -39,6 +39,7 @@ const SquareImagesGrid = () => {
               alt={image.alt}
               width={500}
               height={500}
+              sizes="(max-width: 640px) 50vw, 33vw"
               className={`w-full h-auto block ${
                 image.interactive
                   ? 'transition-transform duration-500 ease-out group-hover:scale-110'
@@ -49,7 +50,7 @@ const SquareImagesGrid = () => {
               <div className="absolute inset-0 bg-azul-950/0 group-hover:bg-azul-950/50 transition-all duration-400 flex items-end justify-center">
                 <div className="translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out w-full">
                   <div className="grid-label-overlay px-2 pb-2 pt-8 sm:pb-3 sm:pt-10">
-                    <span className="block text-white text-[10px] sm:text-xs font-body font-semibold tracking-[0.15em] uppercase text-center drop-shadow-lg">
+                    <span className="block text-white text-xs font-body font-semibold tracking-[0.1em] sm:tracking-[0.15em] uppercase text-center drop-shadow-lg">
                       {image.label}
                     </span>
                   </div>

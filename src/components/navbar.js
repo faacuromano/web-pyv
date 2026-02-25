@@ -68,7 +68,7 @@ function Navbar() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-sm overflow-hidden bg-white shadow-editorial border border-gray-200/60">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-[min(24rem,calc(100vw-2rem))] overflow-hidden bg-white shadow-editorial border border-gray-200/60">
                 <div className="p-3">
                   {products.map((item) => (
                     <div

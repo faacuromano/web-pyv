@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import Image from "next/image";
 import olla01 from "../../../../public/Olla_0.webp";
 import olla02 from "../../../../public/Olla_1.webp";
@@ -8,32 +8,56 @@ import olla04 from "../../../../public/Olla_3.webp";
 import olla05 from "../../../../public/Olla_4.webp";
 
 const OllaPopular = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const touchStart = useRef(null);
   const images = [olla01, olla02, olla03, olla04, olla05];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  const goTo = useCallback((index) => {
+    if (isTransitioning || index === current) return;
+    setIsTransitioning(true);
+    setCurrent(index);
+    setTimeout(() => setIsTransitioning(false), 500);
+  }, [current, isTransitioning]);
+
+  const next = useCallback(() => {
+    goTo(current === images.length - 1 ? 0 : current + 1);
+  }, [current, images.length, goTo]);
+
+  const prev = useCallback(() => {
+    goTo(current === 0 ? images.length - 1 : current - 1);
+  }, [current, images.length, goTo]);
+
+  const onTouchStart = (e) => {
+    touchStart.current = e.touches[0].clientX;
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const onTouchEnd = (e) => {
+    if (touchStart.current === null) return;
+    const diff = touchStart.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? next() : prev();
+    }
+    touchStart.current = null;
   };
+
+  const pad = (n) => String(n).padStart(2, "0");
 
   return (
     <div>
-      <section className="subpage-hero py-16 md:py-24 px-6">
+      <section className="subpage-hero py-12 sm:py-16 md:py-24 px-5 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
             Actividades
           </span>
-          <h1 className="font-display text-white text-3xl md:text-5xl tracking-tighter leading-none mt-3">
+          <h1 className="font-avenir text-white text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-none mt-3">
             Olla Popular
           </h1>
-          <div className="w-12 h-0.5 bg-amarillo-400 mt-6"></div>
+          <div className="w-12 h-0.5 bg-amarillo-400 mt-5 sm:mt-6"></div>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 px-6">
+      <section className="py-10 sm:py-16 md:py-20 px-5 sm:px-6">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-display text-dark-950 text-2xl md:text-3xl tracking-tighter leading-tight">
             El pueblo ayuda al pueblo
@@ -57,63 +81,86 @@ const OllaPopular = () => {
             </p>
           </div>
 
-          {/* Carousel */}
-          <div className="relative mt-12">
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {images.map((image, index) => (
-                  <div key={index} className="min-w-full">
-                    <Image
-                      src={image}
-                      alt={`Imagen ${index + 1} de la olla popular`}
-                      width={800}
-                      height={500}
-                      className="aspect-[16/10] w-full object-cover"
-                    />
-                  </div>
-                ))}
+          {/* ── Gallery ── */}
+          <div className="mt-10 sm:mt-14">
+            {/* Image frame */}
+            <div
+              className="relative aspect-[16/10] overflow-hidden bg-dark-950 select-none"
+              onTouchStart={onTouchStart}
+              onTouchEnd={onTouchEnd}
+            >
+              {images.map((img, i) => (
+                <Image
+                  key={i}
+                  src={img}
+                  alt={`Olla popular ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  className={`object-cover transition-all duration-700 ease-out ${
+                    i === current
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-105"
+                  }`}
+                  priority={i === 0}
+                />
+              ))}
+
+              {/* Counter */}
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 sm:bottom-3 z-10 bg-azul-950/70 backdrop-blur-sm border border-celeste-400/30 px-2 py-1 sm:px-3 sm:py-1.5 rounded-full">
+                <span className="font-avenir text-white text-[10px] sm:text-xs font-semibold tracking-wider sm:tracking-widest tabular-nums text-center block">
+                  {current + 1} <span className="text-celeste-400/70">/</span> {images.length}
+                </span>
               </div>
+
+              {/* Nav arrows */}
+              <button
+                onClick={prev}
+                disabled={isTransitioning}
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-black/50 backdrop-blur-sm text-white rounded-full hover:bg-black/70 active:scale-90 transition-all duration-150"
+                aria-label="Anterior"
+              >
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M10 3L5 8L10 13" />
+                </svg>
+              </button>
+              <button
+                onClick={next}
+                disabled={isTransitioning}
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center bg-black/50 backdrop-blur-sm text-white rounded-full hover:bg-black/70 active:scale-90 transition-all duration-150"
+                aria-label="Siguiente"
+              >
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3L11 8L6 13" />
+                </svg>
+              </button>
             </div>
 
-            <button
-              onClick={prevSlide}
-              className="absolute top-1/2 left-3 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-azul-900/70 text-white hover:bg-celeste-600 transition-colors duration-200"
-              aria-label="Anterior"
-            >
-              &lt;
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute top-1/2 right-3 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-azul-900/70 text-white hover:bg-celeste-600 transition-colors duration-200"
-              aria-label="Siguiente"
-            >
-              &gt;
-            </button>
-
-            <div className="flex justify-center gap-2 mt-4">
-              {images.map((_, index) => (
+            {/* Progress bar */}
+            <div className="flex gap-1 mt-2">
+              {images.map((_, i) => (
                 <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 transition-colors duration-200 ${
-                    currentSlide === index ? "bg-celeste-400" : "bg-dark-200"
-                  }`}
-                  aria-label={`Ir a imagen ${index + 1}`}
-                />
+                  key={i}
+                  onClick={() => goTo(i)}
+                  className="relative h-0.5 flex-1 bg-dark-100 overflow-hidden group"
+                  aria-label={`Ir a imagen ${i + 1}`}
+                >
+                  <div
+                    className={`absolute inset-y-0 left-0 bg-celeste-400 transition-all duration-500 ease-out ${
+                      i === current ? "w-full" : i < current ? "w-full bg-dark-300" : "w-0"
+                    }`}
+                  />
+                </button>
               ))}
             </div>
           </div>
 
-          {/* Video */}
-          <div className="mt-12">
+          {/* ── Video ── */}
+          <div className="mt-12 sm:mt-16">
             <h3 className="font-display text-dark-950 text-xl tracking-tight mb-1">
               El pueblo ayuda al pueblo...
             </h3>
             <p className="font-body text-dark-400 text-sm mb-4">
-              Un pequeño registro de nuestra olla
+              Un peque&ntilde;o registro de nuestra olla
             </p>
             <div className="aspect-video">
               <iframe

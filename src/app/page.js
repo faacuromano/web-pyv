@@ -3,22 +3,24 @@ import communityImage from "../../public/home.png";
 import actionImage from "../../public/gm.webp";
 import proposeImage from "../../public/trabajando.webp";
 import SquareImagesGrid from "@/components/gridImaes";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const HomePage = () => {
   return (
     <div className="overflow-x-hidden">
+      <ScrollReveal />
 
       {/* ═══════════════════════════════════════════
           HERO — Asymmetric Split Screen
       ═══════════════════════════════════════════ */}
       <section className="relative min-h-[100dvh] grid grid-cols-1 lg:grid-cols-[1fr_0.85fr]">
         {/* Left — Text Content */}
-        <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-0 order-2 lg:order-1">
+        <div className="relative z-10 flex flex-col justify-center px-5 sm:px-6 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-20 lg:py-0 order-2 lg:order-1">
           <span className="text-celeste-400 font-body text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase opacity-0 animate-reveal-up">
-            Santa Fe &middot; Tropa de Leales
+            Santa Fe &middot; <span className="text-highlight">Tropa de Leales</span>
           </span>
 
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tighter leading-[0.9] mt-6 opacity-0 animate-reveal-up-1">
+          <h1 className="font-partido text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold uppercase tracking-tight leading-[0.9] mt-6 opacity-0 animate-reveal-up-1">
             Principios
             <br />
             <span className="text-celeste-500">y Valores</span>
@@ -31,16 +33,16 @@ const HomePage = () => {
             en la justicia social de Santa Fe.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-10 opacity-0 animate-reveal-up-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 sm:mt-10 opacity-0 animate-reveal-up-4">
             <a
               href="https://chat.whatsapp.com/DBS17Xx8SUVKN04Fu4wfl8"
-              className="bg-azul-800 text-white font-body font-semibold px-8 py-3.5 text-sm tracking-wide hover:bg-celeste-600 transition-colors duration-300 press-feedback"
+              className="bg-azul-800 text-white font-body font-semibold px-8 py-3.5 text-sm tracking-wide hover:bg-celeste-600 transition-colors duration-300 press-feedback text-center"
             >
               Afiliate ahora
             </a>
             <a
               href="/contacto"
-              className="border border-dark-300 text-dark-800 font-body font-medium px-8 py-3.5 text-sm tracking-wide hover:border-celeste-400 hover:text-celeste-600 transition-all duration-300"
+              className="border border-dark-300 text-dark-800 font-body font-medium px-8 py-3.5 text-sm tracking-wide hover:border-celeste-400 hover:text-celeste-600 transition-all duration-300 text-center"
             >
               Contacto
             </a>
@@ -48,7 +50,7 @@ const HomePage = () => {
         </div>
 
         {/* Right — Hero Image */}
-        <div className="relative h-[45vh] lg:h-auto lg:min-h-[100dvh] overflow-hidden order-1 lg:order-2">
+        <div className="relative h-[35vh] sm:h-[45vh] lg:h-auto lg:min-h-[100dvh] overflow-hidden order-1 lg:order-2">
           <Image
             src={communityImage}
             alt="Militantes de Principios y Valores en Santa Fe"
@@ -68,15 +70,15 @@ const HomePage = () => {
       {/* ═══════════════════════════════════════════
           POLITICAL ACTION — Asymmetric Zig-Zag
       ═══════════════════════════════════════════ */}
-      <section className="py-20 md:py-28 px-6 md:px-12 lg:px-16">
+      <section className="py-14 sm:py-20 md:py-28 px-5 sm:px-6 md:px-12 lg:px-16">
         <div className="max-w-7xl mx-auto">
 
           {/* Section header — left aligned */}
-          <div className="mb-16 max-w-xl opacity-0 animate-reveal-up">
+          <div className="mb-10 sm:mb-16 max-w-xl" data-reveal="up">
             <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
               Nuestra forma de hacer pol&iacute;tica
             </span>
-            <h2 className="font-display text-3xl md:text-5xl tracking-tighter leading-none mt-4">
+            <h2 className="font-avenir text-3xl md:text-5xl font-semibold tracking-tight leading-none mt-4">
               Acci&oacute;n, propuestas
               <br />
               <span className="text-dark-400">y actualidad</span>
@@ -85,7 +87,7 @@ const HomePage = () => {
 
           {/* Row 1 — Large left, text right */}
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-10 mb-6 lg:mb-10">
-            <a href="/nosotros/accion-politica" className="group relative overflow-hidden block aspect-[16/10] lg:aspect-[16/9] card-hover">
+            <a href="/nosotros/accion-politica" className="group relative overflow-hidden block aspect-[16/10] lg:aspect-[16/9] card-hover" data-reveal="left">
               <Image
                 src={actionImage}
                 alt="Accion politica en Santa Fe"
@@ -108,7 +110,7 @@ const HomePage = () => {
               </div>
             </a>
 
-            <a href="/nosotros/proponemos" className="group relative overflow-hidden block aspect-[4/3] lg:aspect-auto card-hover">
+            <a href="/nosotros/proponemos" className="group relative overflow-hidden block aspect-[4/3] lg:aspect-auto card-hover" data-reveal="right">
               <Image
                 src={proposeImage}
                 alt="Propuestas para Rosario y Santa Fe"
@@ -129,7 +131,7 @@ const HomePage = () => {
           </div>
 
           {/* Row 2 — Full width, shorter */}
-          <a href="/nosotros/politica-y-actualidad" className="group relative overflow-hidden block aspect-[21/9] md:aspect-[3/1] card-hover">
+          <a href="/nosotros/politica-y-actualidad" className="group relative overflow-hidden block aspect-[21/9] md:aspect-[3/1] card-hover" data-reveal="up">
             <Image
               src={communityImage}
               alt="Politica y actualidad en Santa Fe"
@@ -159,22 +161,22 @@ const HomePage = () => {
       {/* ═══════════════════════════════════════════
           TREE SECTION — Dark, Dramatic, Highlighted
       ═══════════════════════════════════════════ */}
-      <section className="tree-section-bg relative py-20 md:py-32 px-6 md:px-12 lg:px-16">
+      <section className="tree-section-bg relative py-14 sm:py-20 md:py-32 px-5 sm:px-6 md:px-12 lg:px-16">
         <div className="max-w-7xl mx-auto">
 
           {/* Section header */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end mb-14 md:mb-20">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-end mb-10 sm:mb-14 md:mb-20">
+            <div data-reveal="left">
               <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
                 El &aacute;rbol peronista
               </span>
-              <h2 className="font-display text-white text-3xl md:text-5xl xl:text-6xl tracking-tighter leading-[0.9] mt-4">
+              <h2 className="font-avenir text-white text-3xl md:text-5xl xl:text-6xl font-semibold tracking-tight leading-[0.9] mt-4">
                 Ramas del
                 <br />
                 <span className="text-celeste-400">movimiento</span>
               </h2>
             </div>
-            <div className="lg:text-right">
+            <div className="lg:text-right" data-reveal="right">
               <p className="font-body text-dark-400 text-base md:text-lg leading-relaxed max-w-[50ch] lg:ml-auto">
                 Conoce las ramas que conforman nuestro movimiento.
                 Cada una representa un pilar fundamental de la organizaci&oacute;n.
@@ -183,12 +185,12 @@ const HomePage = () => {
           </div>
 
           {/* Tree Grid */}
-          <div className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto">
+          <div className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto" data-reveal="scale">
             <SquareImagesGrid />
           </div>
 
           {/* Quote */}
-          <div className="text-center mt-14 md:mt-20">
+          <div className="text-center mt-14 md:mt-20" data-reveal="up">
             <div className="w-8 h-0.5 bg-amarillo-400 mx-auto mb-8"></div>
             <blockquote className="font-display text-gray-200/80 text-xl sm:text-2xl md:text-3xl tracking-tight leading-snug max-w-2xl mx-auto">
               &ldquo;El &aacute;rbol se conoce por sus frutos...&rdquo;
@@ -201,12 +203,12 @@ const HomePage = () => {
       {/* ═══════════════════════════════════════════
           CTA — Conclusion
       ═══════════════════════════════════════════ */}
-      <section className="bg-white py-20 md:py-28 px-6 md:px-12 lg:px-16">
+      <section className="bg-white py-14 sm:py-20 md:py-28 px-5 sm:px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-center">
-            <div>
-              <blockquote className="font-display text-dark-950 text-2xl sm:text-3xl md:text-4xl xl:text-5xl tracking-tighter leading-[1.1]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-16 items-center">
+            <div data-reveal="left">
+              <blockquote className="font-avenir text-dark-950 text-xl sm:text-2xl md:text-4xl xl:text-5xl font-medium tracking-tight leading-[1.1]">
                 &ldquo;Mejor que decir es hacer, mejor que prometer es realizar.&rdquo;
               </blockquote>
               <div className="accent-line mt-6"></div>
@@ -216,7 +218,7 @@ const HomePage = () => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3" data-reveal="right">
               <a
                 href="https://chat.whatsapp.com/DBS17Xx8SUVKN04Fu4wfl8"
                 className="bg-azul-800 text-white font-body font-semibold px-10 py-4 text-sm tracking-wide hover:bg-celeste-600 transition-colors duration-300 press-feedback text-center whitespace-nowrap"

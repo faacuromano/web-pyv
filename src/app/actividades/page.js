@@ -11,20 +11,20 @@ const Actividades = () => {
   return (
     <div>
       {/* Subpage hero */}
-      <section className="subpage-hero py-16 md:py-24 px-6">
+      <section className="subpage-hero py-12 sm:py-16 md:py-24 px-5 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
             Nuestro trabajo
           </span>
-          <h1 className="font-display text-white text-3xl md:text-5xl tracking-tighter leading-none mt-3">
+          <h1 className="font-avenir text-white text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight leading-none mt-3">
             Actividades del Partido
           </h1>
-          <div className="w-12 h-0.5 bg-amarillo-400 mt-6"></div>
+          <div className="w-12 h-0.5 bg-amarillo-400 mt-5 sm:mt-6"></div>
         </div>
       </section>
 
       {/* Activity list */}
-      <section className="py-16 md:py-20 px-6">
+      <section className="py-10 sm:py-16 md:py-20 px-5 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="space-y-4">
             {actividades.map((act, idx) => (
@@ -39,7 +39,7 @@ const Actividades = () => {
                   </h3>
                   <p className="font-body text-dark-400 text-sm mt-1">{act.desc}</p>
                 </div>
-                <span className="text-dark-300 group-hover:text-celeste-500 transition-colors duration-300 text-lg ml-4 flex-shrink-0">&rarr;</span>
+                <span className="text-dark-300 group-hover:text-celeste-500 transition-colors duration-300 text-lg ml-2 sm:ml-4 flex-shrink-0">&rarr;</span>
               </a>
             ))}
           </div>

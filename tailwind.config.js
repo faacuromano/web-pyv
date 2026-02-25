@@ -64,6 +64,8 @@ module.exports = {
       fontFamily: {
         display: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         body: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
+        partido: ['"Avenir Next Condensed"', '"Avenir Next"', '"Avenir"', 'system-ui', 'sans-serif'],
+        avenir: ['"Avenir Next"', '"Avenir"', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         revealUp: {
