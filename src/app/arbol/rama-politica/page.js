@@ -1,49 +1,57 @@
 import Image from 'next/image';
 import React from 'react';
-import image from '@/../public/gm.webp';
-
 import image0 from './1.webp';
 import image1 from './2.webp';
 import image2 from './3.webp';
 
-const images = [image0, image1, image2]
+const images = [image0, image1, image2];
 
 const Page = () => {
   return (
-    <div className=" sm:mx-40 flex flex-col items-center justify-center px-8">
-      <h1 className="text-4xl text-cyan-900 font-bold mb-8">Rama Politica</h1>
+    <div>
+      <section className="subpage-hero py-16 md:py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
+            El árbol peronista
+          </span>
+          <h1 className="font-display text-white text-3xl md:text-5xl tracking-tighter leading-none mt-3">
+            Rama Política
+          </h1>
+          <div className="w-12 h-0.5 bg-amarillo-400 mt-6"></div>
+        </div>
+      </section>
 
-      <div className="mb-8">
-        <p className="text-xl font-normal">
-        Esta rama se encarga de el analisis, la planificación estratégica, y el desarrollo de propuestas políticas. 
-        </p>
-        <p className="text-xl font-normal">
-        En línea con los principios Peronistas sobre la importancia del previo analisis para la adecuada planificación, 
-        esta rama trabaja en la elaboración de estrategias y políticas que reflejen los valores y principios del partido, respondiendo asi a las 
-        necesidades de la comunidad. 
-        </p>
-      </div>
-
-      <div className="grid  grid-cols-2 md:grid-cols-4 gap-1 w-full">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className="relative w-full h-60 overflow-hidden rounded-lg hover:shadow-md transition duration-300 ease-in-out"
-          >
-            <Image
-              src={img}
-              alt={`Actividad ${index + 1}`}
-              layout="fill"
-              className="object-cover  w-full h-auto"
-            />
-            <div className="absolute  inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white text-lg font-bold">
-                Actividad {index + 1}
-              </p>
-            </div>
+      <section className="py-16 md:py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mb-12">
+            <p className="font-body text-dark-600 text-base md:text-lg leading-relaxed">
+              Esta rama se encarga del análisis, la planificación estratégica, y el
+              desarrollo de propuestas políticas.
+            </p>
+            <p className="font-body text-dark-600 text-base md:text-lg leading-relaxed mt-4">
+              En línea con los principios peronistas sobre la importancia del previo
+              análisis para la adecuada planificación, esta rama trabaja en la
+              elaboración de estrategias y políticas que reflejen los valores y
+              principios del partido, respondiendo así a las necesidades de la comunidad.
+            </p>
           </div>
-        ))}
-      </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {images.map((img, index) => (
+              <div key={index} className="group relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={img}
+                  alt={`Rama Política - Actividad ${index + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-azul-950/0 group-hover:bg-azul-950/20 transition-colors duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

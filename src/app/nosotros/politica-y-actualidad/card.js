@@ -1,14 +1,22 @@
-// src/components/ActividadCard.js
 import React from 'react';
 import Image from 'next/image';
+
 const ActividadCard = ({ titulo, subtitulo, texto, imagen }) => {
   return (
-    <div className="shadow-sm bg-zinc-300 	border-solid border-gray-500  border	 rounded-lg rounded shadow hover:shadow-lg transition">
-      <Image width={300} height={300} src={imagen} alt={titulo} className="shadow-sm w-full h-40 object-cover rounded-t-lg" />
-      <div className=" p-4">
-        <h2 className="text-lg font-semibold text-blue-700">{titulo}</h2>
-        <span className="text-sm text-red-900 font-semibold">{subtitulo}</span>
-        <p className="text-gray-800 mt-2">{texto}</p>
+    <div className="group card-hover">
+      <div className="relative aspect-[16/10] overflow-hidden">
+        <Image
+          width={400}
+          height={250}
+          src={imagen}
+          alt={titulo}
+          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+        />
+      </div>
+      <div className="pt-4">
+        <h3 className="font-display text-dark-950 text-lg tracking-tight">{titulo}</h3>
+        <span className="font-body text-celeste-600 text-xs font-semibold tracking-wide uppercase">{subtitulo}</span>
+        <p className="font-body text-dark-500 text-sm mt-2 leading-relaxed">{texto}</p>
       </div>
     </div>
   );

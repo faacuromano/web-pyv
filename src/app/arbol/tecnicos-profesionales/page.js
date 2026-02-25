@@ -1,28 +1,43 @@
 import React from 'react';
 import Image from 'next/image';
-import trabajo from "@/../public/trabajando.webp"
+import trabajo from "@/../public/trabajando.webp";
 
-const HomePage = () => {
+const Page = () => {
   return (
-    <main className="flex justify-center ">
-    <div className='flex flex-col items-center justify-evenly w-3/5 h-96 bg-gray-100 rounded-lg'>
-      <div className='flex flex-row-reverse	p-4'>
-      <h1 className='text-4xl font-bold text-blue-900 mb-4 m-2 flex items-center '>En construcción</h1>
-      <Image
+    <div>
+      <section className="subpage-hero py-16 md:py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
+            El árbol peronista
+          </span>
+          <h1 className="font-display text-white text-3xl md:text-5xl tracking-tighter leading-none mt-3">
+            T&eacute;cnicos y Profesionales
+          </h1>
+          <div className="w-12 h-0.5 bg-amarillo-400 mt-6"></div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-xl mx-auto text-center">
+          <div className="relative w-24 h-24 mx-auto mb-8 overflow-hidden rounded-full">
+            <Image
               src={trabajo}
-              alt='Foto de Peron trabajando'
-              className="object-cover w-40 aspect-square m-2 rounded-full"
+              alt="En construcción"
+              fill
+              className="object-cover"
             />
-      </div>
-      <p className='text-2xl text-gray-900 text-center mb-6 font-normal'>
-      <em>Mejor que decir es hacer, mejor que prometer es realizar.</em>
-      </p>
-      <p className='text-lg text-gray-700 text-center'>
-        Volvé pronto para ver los frutos de nuestro esfuerzo colectivo.
-      </p>
+          </div>
+          <blockquote className="font-display text-dark-950 text-xl md:text-2xl tracking-tight leading-snug">
+            &ldquo;Mejor que decir es hacer, mejor que prometer es realizar.&rdquo;
+          </blockquote>
+          <div className="w-10 h-0.5 bg-amarillo-400 mx-auto mt-6 mb-6"></div>
+          <p className="font-body text-dark-400 text-base">
+            En construcción. Volv&eacute; pronto para ver los frutos de nuestro esfuerzo colectivo.
+          </p>
+        </div>
+      </section>
     </div>
-    </main>
   );
 };
 
-export default HomePage;
+export default Page;

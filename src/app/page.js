@@ -1,150 +1,241 @@
 import Image from "next/image";
 import communityImage from "../../public/home.png";
 import actionImage from "../../public/gm.webp";
-import proposeImage from "../../public/gm.webp";
-import politicsImage from "../../public/gm.webp";
-import Accion from "@/app/nosotros/accion-politica/page.js";
-import Actualidad from "@/app/nosotros/politica-y-actualidad/page.js";
-import Proponemos from "@/app/nosotros/proponemos/page.js";
+import proposeImage from "../../public/trabajando.webp";
 import SquareImagesGrid from "@/components/gridImaes";
 
 const HomePage = () => {
   return (
-    <main className="bg-gray-100 overflow-x-hidden">
-        {/* Agregar alt a la imagen del banner */}
-        <Image
-    src={communityImage.src}
-    alt="Imagen de banner del Partido Principios y Valores en Rosario, Santa Fe"
-    className="md:w-full max-width-100 max-w-none h-full object-cover opacity-0 animate-zoom-in"
-    width={1600}
-    height={1068}
-        />
-      {/* Sección de Propuestas */}
-      <section className="py-4">
-        <div className="text-center my-4 p-2">
-          <p className="text-md sm:text-xl text-gray-900">
-            Nuestra forma de hacer política, desde la acción, siempre con el
-            norte y el compromiso en la justicia social de Santa Fe.
+    <div className="overflow-x-hidden">
+
+      {/* ═══════════════════════════════════════════
+          HERO — Asymmetric Split Screen
+      ═══════════════════════════════════════════ */}
+      <section className="relative min-h-[100dvh] grid grid-cols-1 lg:grid-cols-[1fr_0.85fr]">
+        {/* Left — Text Content */}
+        <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-0 order-2 lg:order-1">
+          <span className="text-celeste-400 font-body text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase opacity-0 animate-reveal-up">
+            Santa Fe &middot; Tropa de Leales
+          </span>
+
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tighter leading-[0.9] mt-6 opacity-0 animate-reveal-up-1">
+            Principios
+            <br />
+            <span className="text-celeste-500">y Valores</span>
+          </h1>
+
+          <div className="accent-line mt-8 opacity-0 animate-line-grow"></div>
+
+          <p className="font-body text-dark-500 text-base md:text-lg leading-relaxed max-w-[50ch] mt-6 opacity-0 animate-reveal-up-3">
+            Desde la acci&oacute;n, con el norte y el compromiso
+            en la justicia social de Santa Fe.
           </p>
+
+          <div className="flex flex-wrap gap-4 mt-10 opacity-0 animate-reveal-up-4">
+            <a
+              href="https://chat.whatsapp.com/DBS17Xx8SUVKN04Fu4wfl8"
+              className="bg-azul-800 text-white font-body font-semibold px-8 py-3.5 text-sm tracking-wide hover:bg-celeste-600 transition-colors duration-300 press-feedback"
+            >
+              Afiliate ahora
+            </a>
+            <a
+              href="/contacto"
+              className="border border-dark-300 text-dark-800 font-body font-medium px-8 py-3.5 text-sm tracking-wide hover:border-celeste-400 hover:text-celeste-600 transition-all duration-300"
+            >
+              Contacto
+            </a>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
-          <a
-            href="/nosotros/accion-politica"
-            className="cursor-pointer sm:aspect-[15/3] aspect-[6/3] shadow-lg p-6 w-100 relative overflow-hidden hover:shadow-xl transition text-center"
-          >
-            <Image
-              src={actionImage}
-              alt="Reunión de acción política promoviendo la justicia social en Santa Fe"
-              width={320}
-              height={200}
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            />
-            <div className="hover:opacity-90 hover:bg-cyan-700 bg-cyan-800 bg-opacity-90 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-              <h3 className="text-xl font-semibold text-white">
-                Acción en Santa Fe
-              </h3>
-              <h4 className="text-gray-400 mb-2">Para formar comunidad</h4>
-              <p className="text-gray-200 m-2">
-                La acción política es una acción colectiva; es menester terminar
-                con la mentalidad individualista.
-              </p>
-            </div>
-          </a>
 
-          <a
-            href="/nosotros/proponemos"
-            className="cursor-pointer sm:aspect-[15/3] aspect-[6/3] shadow-lg p-6 w-100 relative overflow-hidden hover:shadow-xl transition text-center"
-          >
-            <Image
-              src={proposeImage}
-              alt="Propuestas transformadoras para Rosario y Santa Fe"
-              width={320}
-              height={200}
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            />
-            <div className="bg-gray-200 hover:bg-yellow-100 transition-colors duration-500 hover:bg-opacity-80 bg-opacity-90 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-              <h3 className="text-xl font-semibold text-black">Propuestas</h3>
-              <h4 className="text-gray-600 mb-2">
-                Propuestas que Transforman Rosario y Santa Fe
-              </h4>
-              <p className="text-black m-2">
-                Estar al tanto de lo que está ocurriendo en nuestro país y cómo
-                respondemos.
-              </p>
-            </div>
-          </a>
+        {/* Right — Hero Image */}
+        <div className="relative h-[45vh] lg:h-auto lg:min-h-[100dvh] overflow-hidden order-1 lg:order-2">
+          <Image
+            src={communityImage}
+            alt="Militantes de Principios y Valores en Santa Fe"
+            fill
+            className="object-cover opacity-0 animate-fade-in"
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+          {/* Mobile — bottom fade for text below */}
+          <div className="hero-fade-bottom absolute inset-0 lg:hidden"></div>
+          {/* Desktop — left fade into white bg */}
+          <div className="hero-fade-left absolute inset-0 hidden lg:block"></div>
+        </div>
+      </section>
 
-          <a
-            href="/nosotros/politica-y-actualidad"
-            className="cursor-pointer sm:aspect-[15/3] aspect-[6/3] shadow-lg p-6 w-100 relative overflow-hidden hover:shadow-xl transition text-center"
-          >
+
+      {/* ═══════════════════════════════════════════
+          POLITICAL ACTION — Asymmetric Zig-Zag
+      ═══════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 px-6 md:px-12 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Section header — left aligned */}
+          <div className="mb-16 max-w-xl opacity-0 animate-reveal-up">
+            <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
+              Nuestra forma de hacer pol&iacute;tica
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl tracking-tighter leading-none mt-4">
+              Acci&oacute;n, propuestas
+              <br />
+              <span className="text-dark-400">y actualidad</span>
+            </h2>
+          </div>
+
+          {/* Row 1 — Large left, text right */}
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-10 mb-6 lg:mb-10">
+            <a href="/nosotros/accion-politica" className="group relative overflow-hidden block aspect-[16/10] lg:aspect-[16/9] card-hover">
+              <Image
+                src={actionImage}
+                alt="Accion politica en Santa Fe"
+                fill
+                className="object-cover img-zoom"
+                sizes="(max-width: 1024px) 100vw, 65vw"
+              />
+              <div className="absolute inset-0 bg-azul-950/40 group-hover:bg-azul-950/55 transition-colors duration-400"></div>
+              <div className="absolute bottom-0 left-0 p-6 md:p-8 lg:p-10">
+                <span className="text-celeste-300 font-body text-xs font-semibold tracking-[0.2em] uppercase">
+                  Acci&oacute;n pol&iacute;tica
+                </span>
+                <h3 className="font-display text-white text-2xl md:text-3xl lg:text-4xl tracking-tight leading-tight mt-2">
+                  Para formar<br />comunidad
+                </h3>
+                <p className="text-gray-300/80 text-sm md:text-base mt-3 max-w-[45ch] leading-relaxed hidden sm:block">
+                  La acci&oacute;n pol&iacute;tica es colectiva; es menester terminar
+                  con la mentalidad individualista.
+                </p>
+              </div>
+            </a>
+
+            <a href="/nosotros/proponemos" className="group relative overflow-hidden block aspect-[4/3] lg:aspect-auto card-hover">
+              <Image
+                src={proposeImage}
+                alt="Propuestas para Rosario y Santa Fe"
+                fill
+                className="object-cover img-zoom"
+                sizes="(max-width: 1024px) 100vw, 35vw"
+              />
+              <div className="absolute inset-0 bg-azul-950/40 group-hover:bg-azul-950/55 transition-colors duration-400"></div>
+              <div className="absolute bottom-0 left-0 p-6 md:p-8">
+                <span className="text-celeste-300 font-body text-xs font-semibold tracking-[0.2em] uppercase">
+                  Propuestas
+                </span>
+                <h3 className="font-display text-white text-xl md:text-2xl tracking-tight leading-tight mt-2">
+                  Transformando<br />Santa Fe
+                </h3>
+              </div>
+            </a>
+          </div>
+
+          {/* Row 2 — Full width, shorter */}
+          <a href="/nosotros/politica-y-actualidad" className="group relative overflow-hidden block aspect-[21/9] md:aspect-[3/1] card-hover">
             <Image
-              src={politicsImage}
-              alt="Política actual orientada al bien común y la justicia social"
-              width={320}
-              height={200}
-              className="absolute top-0 left-0 w-full h-full object-cover"
+              src={communityImage}
+              alt="Politica y actualidad en Santa Fe"
+              fill
+              className="object-cover img-zoom"
+              sizes="100vw"
             />
-            <div className="hover:opacity-90 hover:bg-cyan-700 bg-cyan-800 bg-opacity-90 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
-              <h3 className="text-xl font-semibold text-white ">
-                Política Actual
-              </h3>
-              <h4 className="text-gray-400 mb-2">
-                Justicia Social y Bienestar Común. <br></br>
-              </h4>
-              <p className="text-white m-2">
-                Iniciativas para el bien común que promuevan la justicia social.
-              </p>
+            <div className="absolute inset-0 bg-azul-950/50 group-hover:bg-azul-950/60 transition-colors duration-400"></div>
+            <div className="absolute bottom-0 left-0 p-6 md:p-8 lg:p-10 flex flex-col sm:flex-row sm:items-end sm:justify-between w-full">
+              <div>
+                <span className="text-celeste-300 font-body text-xs font-semibold tracking-[0.2em] uppercase">
+                  Pol&iacute;tica y actualidad
+                </span>
+                <h3 className="font-display text-white text-xl md:text-2xl lg:text-3xl tracking-tight leading-tight mt-2">
+                  Justicia social y bienestar com&uacute;n
+                </h3>
+              </div>
+              <span className="text-celeste-300 font-body text-sm font-medium tracking-wide mt-3 sm:mt-0 hidden sm:inline-block">
+                Ver m&aacute;s &rarr;
+              </span>
             </div>
           </a>
         </div>
       </section>
-      <div className="bg-white p-4">
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold w-full text-center m-2">
-          Ramas del movimiento peronista
-        </h1>
-        <div className="container md:w-2/5 mx-auto flex justify-center">
-          <SquareImagesGrid />
-        </div>
-        <h1 className="text-lg sm:text-xl md:text-2xl text-gray-500 italic font-logth w-full text-center mt-8">
-          El arbol se conoce por sus frutos...
-        </h1>
-      </div>
 
-      {/* Cita Final */}
-      <section className="py-8 bg-gray-00 text-center">
-        <p className="text-lg italic text-gray-800">
-          Mejor que decir es hacer, mejor que prometer es realizar.
-        </p>
+
+      {/* ═══════════════════════════════════════════
+          TREE SECTION — Dark, Dramatic, Highlighted
+      ═══════════════════════════════════════════ */}
+      <section className="tree-section-bg relative py-20 md:py-32 px-6 md:px-12 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Section header */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end mb-14 md:mb-20">
+            <div>
+              <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
+                El &aacute;rbol peronista
+              </span>
+              <h2 className="font-display text-white text-3xl md:text-5xl xl:text-6xl tracking-tighter leading-[0.9] mt-4">
+                Ramas del
+                <br />
+                <span className="text-celeste-400">movimiento</span>
+              </h2>
+            </div>
+            <div className="lg:text-right">
+              <p className="font-body text-dark-400 text-base md:text-lg leading-relaxed max-w-[50ch] lg:ml-auto">
+                Conoce las ramas que conforman nuestro movimiento.
+                Cada una representa un pilar fundamental de la organizaci&oacute;n.
+              </p>
+            </div>
+          </div>
+
+          {/* Tree Grid */}
+          <div className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto">
+            <SquareImagesGrid />
+          </div>
+
+          {/* Quote */}
+          <div className="text-center mt-14 md:mt-20">
+            <div className="w-8 h-0.5 bg-amarillo-400 mx-auto mb-8"></div>
+            <blockquote className="font-display text-gray-200/80 text-xl sm:text-2xl md:text-3xl tracking-tight leading-snug max-w-2xl mx-auto">
+              &ldquo;El &aacute;rbol se conoce por sus frutos...&rdquo;
+            </blockquote>
+          </div>
+        </div>
       </section>
-    </main>
+
+
+      {/* ═══════════════════════════════════════════
+          CTA — Conclusion
+      ═══════════════════════════════════════════ */}
+      <section className="bg-white py-20 md:py-28 px-6 md:px-12 lg:px-16">
+        <div className="max-w-4xl mx-auto">
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-center">
+            <div>
+              <blockquote className="font-display text-dark-950 text-2xl sm:text-3xl md:text-4xl xl:text-5xl tracking-tighter leading-[1.1]">
+                &ldquo;Mejor que decir es hacer, mejor que prometer es realizar.&rdquo;
+              </blockquote>
+              <div className="accent-line mt-6"></div>
+              <p className="font-body text-dark-500 text-base md:text-lg leading-relaxed mt-6 max-w-[55ch]">
+                Sumate a Principios y Valores.
+                Juntos construimos la Santa Fe que merecemos.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://chat.whatsapp.com/DBS17Xx8SUVKN04Fu4wfl8"
+                className="bg-azul-800 text-white font-body font-semibold px-10 py-4 text-sm tracking-wide hover:bg-celeste-600 transition-colors duration-300 press-feedback text-center whitespace-nowrap"
+              >
+                Afiliate ahora &rarr;
+              </a>
+              <a
+                href="/contacto"
+                className="border border-dark-300 text-dark-800 font-body font-medium px-10 py-4 text-sm tracking-wide hover:border-celeste-400 hover:text-celeste-600 transition-all duration-300 text-center whitespace-nowrap"
+              >
+                Contactanos
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
   );
 };
 
 export default HomePage;
-
-{
-  /*
-      <section className="py-16 bg-gray-100 text-center">
-        <h2 className="text-3xl font-bold text-blue-900">Actualidad</h2>
-        <p className="text-lg text-gray-700">
-          Mantente informado sobre nuestras últimas acciones y noticias en
-          Santa Fe.
-        </p>
-        <div className="flex flex-wrap justify-center gap-8">
-          <div className="bg-white rounded-lg shadow-lg p-6 w-80">
-            <h3 className="text-xl font-semibold mb-2">
-              Reunión comunitaria en Rosario
-            </h3>
-            <p className="text-gray-600">
-              Descubre cómo estamos colaborando con vecinos para generar cambios
-              significativos.
-            </p>
-            <button className="mt-4 text-blue-500 hover:underline">
-              Leer más
-            </button>
-          </div>
-        </div>
-      </section>
-      */
-}

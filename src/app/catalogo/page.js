@@ -6,32 +6,33 @@ import logoPyV from '@/../public/logopyv.webp'
 import olla from '@/../public/dias_mas_felices.webp'
 import remera_negra from '@/../public/remera_negra.webp'
 import remera_blanca from '@/../public/remera_blanca.webp'
+
 const products = [
   {
     id: 1,
     name: 'Remera Negra Tropa de Leales',
-    description: 'Descripción breve del producto 1.',
+    description: 'Remera negra oficial del partido.',
     price: '15.000',
     image: remera_negra,
   },
   {
     id: 2,
     name: 'Remera Blanca Tropa de Leales',
-    description: 'Descripción breve del producto 2.',
+    description: 'Remera blanca oficial del partido.',
     price: '15.000',
     image: remera_blanca,
   },
   {
     id: 3,
     name: 'Stickers',
-    description: 'Stickers peronistas a consultar por privado',
+    description: 'Stickers peronistas a consultar por privado.',
     price: 'Consultar',
     image: logoPyV,
   },
   {
     id: 4,
-    name: 'Los dias mas felices',
-    description: 'Plan Economico Peronista',
+    name: 'Los días más felices',
+    description: 'Plan Económico Peronista.',
     price: '18.000',
     image: olla,
   },
@@ -39,13 +40,29 @@ const products = [
 
 const CatalogPage = () => {
   return (
-    <main className="min-h-screen ">
-      <h1 className="text-3xl font-bold text-center  text-cyan-800">
-        Catálogo de Principios y Valores
-      </h1>
-      <ProductList products={products} />
-      <p className='text-center text-sm p-2'>* Si estas interesado en alguno de los productos que ofrecemos desde el Partido Principios y Valores de Rosario, Santa Fe. Comunicate por whatsapp para ver los diferentes medios de pagos y stocks.</p>
-    </main>
+    <div>
+      <section className="subpage-hero py-16 md:py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
+            Nuestros productos
+          </span>
+          <h1 className="font-display text-white text-3xl md:text-5xl tracking-tighter leading-none mt-3">
+            Catálogo
+          </h1>
+          <div className="w-12 h-0.5 bg-amarillo-400 mt-6"></div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <ProductList products={products} />
+          <p className="font-body text-sm text-dark-400 mt-12 leading-relaxed">
+            Si estás interesado en alguno de los productos, comunicate por WhatsApp
+            para ver los diferentes medios de pago y stock disponible.
+          </p>
+        </div>
+      </section>
+    </div>
   );
 };
 

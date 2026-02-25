@@ -1,34 +1,55 @@
 import React from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
+
+const actividades = [
+  { href: '/actividades/campania-afiliacion', label: 'Campaña de Afiliación', desc: 'Sumate al partido, unite a la causa' },
+  { href: '/actividades/club-de-lectura', label: 'Club de lectura', desc: 'Formación política y cultural colectiva' },
+  { href: '/actividades/olla-popular', label: 'Olla popular', desc: 'El pueblo ayuda al pueblo' },
+  { href: '/actividades/economia-popular', label: 'Economía Popular', desc: 'Red solidaria de intercambio y producción' },
+];
 
 const Actividades = () => {
   return (
-    <div className="flex justify-center pt-8 px-4">
+    <div>
+      {/* Subpage hero */}
+      <section className="subpage-hero py-16 md:py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <span className="text-celeste-400 font-body text-xs font-semibold tracking-[0.3em] uppercase">
+            Nuestro trabajo
+          </span>
+          <h1 className="font-display text-white text-3xl md:text-5xl tracking-tighter leading-none mt-3">
+            Actividades del Partido
+          </h1>
+          <div className="w-12 h-0.5 bg-amarillo-400 mt-6"></div>
+        </div>
+      </section>
 
-      <div className="flex flex-col max-w-xl">
-        <h1 className="text-4xl text-cyan-800 font-bold mb-6">Actividades del Partido Principios y Valores</h1>
-        <ul className="space-y-4">
-        <a href='/actividades/campania-afiliacion' className="flex w-full items-center text-2xl bg-gray-200 rounded-md p-3">
-            <FaCheckCircle className="text-green-800 mr-2" />
-            Campaña de Afiliación
-          </a>
-          <a href='/actividades/club-de-lectura' className="flex w-full items-center text-2xl bg-gray-200 rounded-md p-3">
-            <FaCheckCircle className="text-green-800 mr-2" />
-            Club de lectura
-          </a>
-          <a href='/actividades/olla-popular' className="flex w-full items-center text-2xl bg-gray-200 rounded-md p-3">
-            <FaCheckCircle className="text-green-800 mr-2" />
-            Olla popular
-          </a>
-          <a href='/actividades/economia-popular' className="flex w-full items-center text-2xl bg-gray-200 rounded-md p-3">
-            <FaCheckCircle className="text-green-800 mr-2" />
-            Economia Popular
-          </a>
-        </ul>
-        <p className="text-lg text-black mt-6">
-          * Si te interesa participar de cualquiera de nuestras actividades, no dudes en comunicarte haciendo click en los enlaces.
-        </p>
-      </div>
+      {/* Activity list */}
+      <section className="py-16 md:py-20 px-6">
+        <div className="max-w-2xl mx-auto">
+          <div className="space-y-4">
+            {actividades.map((act, idx) => (
+              <a
+                key={idx}
+                href={act.href}
+                className="group flex items-center justify-between border-b border-gray-200/80 pb-4 transition-all duration-300 hover:border-celeste-400"
+              >
+                <div>
+                  <h3 className="font-display text-dark-950 text-lg md:text-xl tracking-tight group-hover:text-celeste-600 transition-colors duration-300">
+                    {act.label}
+                  </h3>
+                  <p className="font-body text-dark-400 text-sm mt-1">{act.desc}</p>
+                </div>
+                <span className="text-dark-300 group-hover:text-celeste-500 transition-colors duration-300 text-lg ml-4 flex-shrink-0">&rarr;</span>
+              </a>
+            ))}
+          </div>
+
+          <p className="text-sm text-dark-400 mt-12 leading-relaxed">
+            Si te interesa participar de cualquiera de nuestras actividades,
+            no dudes en comunicarte haciendo click en los enlaces.
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
